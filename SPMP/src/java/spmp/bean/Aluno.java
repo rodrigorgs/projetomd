@@ -27,6 +27,7 @@ import javax.persistence.Table;
 @NamedQuery(name = "Aluno.findByNome", query = "SELECT a FROM Aluno a WHERE a.nome = :nome"), 
 @NamedQuery(name = "Aluno.findByEmail", query = "SELECT a FROM Aluno a WHERE a.email = :email"), 
 @NamedQuery(name = "Aluno.findBySenha", query = "SELECT a FROM Aluno a WHERE a.senha = :senha")})
+
 public class Aluno implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

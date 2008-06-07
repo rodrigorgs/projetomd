@@ -6,6 +6,9 @@
 package spmp.dao;
 
 import spmp.dao.data.AlunoData;
+import spmp.dao.data.DisciplinaData;
+import spmp.dao.data.MatriculaData;
+import spmp.dao.data.TurmaData;
 
 /**
  *
@@ -28,6 +31,18 @@ public class ManagerDAO implements DAOFactory {
 
     public AlunoDAO createAlunoDAO() {
         return new AlunoData();
+    }
+
+    public DisciplinaDAO createDiciplinaDAO() {
+        return new DisciplinaData();
+    }
+
+    public TurmaDAO createTurmaDAO() {
+        return new TurmaData();
+    }
+
+    public MatriculaDAO createMatriculaDAO() {
+        return new MatriculaData();
     }
 
 }

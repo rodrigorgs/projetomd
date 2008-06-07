@@ -12,5 +12,9 @@ package spmp.dao;
 public interface DAOFactory {
     
     public AlunoDAO createAlunoDAO();
+    public DisciplinaDAO createDiciplinaDAO();
+    public TurmaDAO createTurmaDAO();
+    public MatriculaDAO createMatriculaDAO();
+    
 
 }

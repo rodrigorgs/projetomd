@@ -501,10 +501,12 @@
         <copy-ear-war file="${file.reference.derby.jar}" propname="included.lib.file.reference.derby.jar.X"/>
         <basename file="${file.reference.derbyclient.jar}" property="included.lib.file.reference.derbyclient.jar"/>
         <copy-ear-war file="${file.reference.derbyclient.jar}" propname="included.lib.file.reference.derbyclient.jar.X"/>
+        <basename file="${file.reference.mysql-connector-java-3.1.12-bin.jar}" property="included.lib.file.reference.mysql-connector-java-3.1.12-bin.jar"/>
+        <copy-ear-war file="${file.reference.mysql-connector-java-3.1.12-bin.jar}" propname="included.lib.file.reference.mysql-connector-java-3.1.12-bin.jar.X"/>
         <copy file="${libs.exceptionhandler-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update">
-            <attribute name="Class-Path" value="${included.lib.libs.jsf12.classpath.1.X} ${included.lib.libs.jsf12.classpath.2.X} ${included.lib.libs.jsf12.classpath.3.X} ${included.lib.libs.jsf12.classpath.4.X} ${included.lib.libs.jsf12.classpath.5.X} ${included.lib.libs.jsf12.classpath.6.X} ${included.lib.libs.jstl11.classpath.1.X} ${included.lib.libs.jstl11.classpath.2.X} ${included.lib.libs.jsf12-support.classpath.1.X} ${included.lib.libs.jsf12-support.classpath.2.X} ${included.lib.libs.jsf12-support.classpath.3.X} ${included.lib.libs.jsf12-support.classpath.4.X} ${included.lib.libs.woodstock-components.classpath.1.X} ${included.lib.libs.woodstock-components.classpath.2.X} ${included.lib.libs.woodstock-components.classpath.3.X} ${included.lib.libs.woodstock-components.classpath.4.X} ${included.lib.libs.woodstock-components.classpath.5.X} ${included.lib.libs.woodstock-components.classpath.6.X} ${included.lib.libs.woodstock-components.classpath.7.X} ${included.lib.libs.woodstock-theme-default.classpath} ${included.lib.libs.toplink.classpath.1.X} ${included.lib.libs.toplink.classpath.2.X} ${included.lib.file.reference.derby.jar} ${included.lib.file.reference.derbyclient.jar} "/>
+            <attribute name="Class-Path" value="${included.lib.libs.jsf12.classpath.1.X} ${included.lib.libs.jsf12.classpath.2.X} ${included.lib.libs.jsf12.classpath.3.X} ${included.lib.libs.jsf12.classpath.4.X} ${included.lib.libs.jsf12.classpath.5.X} ${included.lib.libs.jsf12.classpath.6.X} ${included.lib.libs.jstl11.classpath.1.X} ${included.lib.libs.jstl11.classpath.2.X} ${included.lib.libs.jsf12-support.classpath.1.X} ${included.lib.libs.jsf12-support.classpath.2.X} ${included.lib.libs.jsf12-support.classpath.3.X} ${included.lib.libs.jsf12-support.classpath.4.X} ${included.lib.libs.woodstock-components.classpath.1.X} ${included.lib.libs.woodstock-components.classpath.2.X} ${included.lib.libs.woodstock-components.classpath.3.X} ${included.lib.libs.woodstock-components.classpath.4.X} ${included.lib.libs.woodstock-components.classpath.5.X} ${included.lib.libs.woodstock-components.classpath.6.X} ${included.lib.libs.woodstock-components.classpath.7.X} ${included.lib.libs.woodstock-theme-default.classpath} ${included.lib.libs.toplink.classpath.1.X} ${included.lib.libs.toplink.classpath.2.X} ${included.lib.file.reference.derby.jar} ${included.lib.file.reference.derbyclient.jar} ${included.lib.file.reference.mysql-connector-java-3.1.12-bin.jar} "/>
         </manifest>
         <delete dir="${dist.ear.dir}/temp"/>
     </target>
@@ -533,6 +535,7 @@
         <copy file="${libs.toplink.classpath.libfile.1}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copy file="${file.reference.derby.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copy file="${file.reference.derbyclient.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copy file="${file.reference.mysql-connector-java-3.1.12-bin.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copy file="${libs.exceptionhandler-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init,compile,compile-jsps,-pre-dist,library-inclusion-in-manifest" name="do-ear-dist">

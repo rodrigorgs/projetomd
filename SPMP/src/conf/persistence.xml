@@ -17,5 +17,6 @@
       <!--property name="toplink.ddl-generation" value="none"/-->
       <property name="toplink.ddl-generation" value="drop-and-create-tables"/>
     </properties>
+   
   </persistence-unit>
 </persistence>
