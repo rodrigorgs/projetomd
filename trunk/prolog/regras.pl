@@ -2,6 +2,11 @@
 % - quebra de pré-requisito;
 % - aproveitamento de disciplinas (aluno transferido de outra universidade).
 
+%domain_predicate(X) :-
+%	setof(Pred2, predicate_property(Pred2, _), All), !, 
+%	setof(Pred1, predicate_property(Pred1, built_in), Builtins), 
+%	subtract(All, Builtins, X).
+
 % ATENÇÃO
 % Predicados marcados com PREDICADO COMPUTADO não são armazenados
 % no banco de dados.
@@ -47,6 +52,10 @@ choque_turma(T1, T2) :-
 %   de horário.
 %   VV = valor verdade, pertencente a {true, false}.
 %
+%   exemplo de consulta: pode_se_matricular_disc(rodrigo, mat055, X).
+%   retorna X = true ou X = false se o sistema souber responder.
+%   retorna fail se o sistema não souber responder.
+%
 % pode_se_matricular_turma(Aluno, Turma, VV)  PREDICADO COMPUTADO
 %   Levando em consideração choques de horário e pré-requisitos entre 
 %   disciplinas, indica se o aluno pode se matricular na turma.
@@ -61,6 +70,9 @@ choque_turma(T1, T2) :-
 % foi_aprovado(Aluno, Disciplina, VV)
 %   Significa que o aluno foi aprovado na disciplina.
 %   VV = valor verdade (veja pode_se_matricular_disc).
+%
+%   predicados da forma foi_aprovado(_, _, false) não são armazenados no
+%   banco de dados, pois isso pode mudar.
 %
 %%%
 
@@ -128,7 +140,6 @@ foi_aprovado(Aluno, Disciplina, false) :-
 	eh_prerequisito_trans(Pre, Disciplina),
 	foi_aprovado(Aluno, Pre, false).
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% Matrícula %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -158,6 +169,11 @@ pode_se_matricular_turma(Aluno, T2, false) :-
 pode_se_matricular_turma(Aluno, Turma, false) :-
 	not(pre_matricula(Aluno, Disciplina, presente)),
 	turma(Turma, Disciplina, _).
+
+%pode_se_matricular_turma(Aluno, Turma, true) :-
+% 	not(pode_se_matricular_turma(Aluno, Turma, _)),
+% 	turma(Turma, Disciplina, _),
+% 	pre_matricula(Aluno, Disciplina, _).
 
 % R1
 % Se uma pessoa está matriculada em uma turma, então está matriculada
