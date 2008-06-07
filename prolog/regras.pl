@@ -153,6 +153,11 @@ foi_aprovado(Aluno, Disciplina, false) :-
 
 % TODO: substituir pode_se_matricular_turma/3 por nao_pode_se_matricular_turma/2 ?
 
+% predicado para facilitar consulta Java
+turmas_para_aluno(Aluno, Turma) :-
+	turma(Turma, Disciplina, Codigo),
+	pre_matricula(Aluno, Disciplina, presente).
+
 % Ninguém pode se matricular em duas turmas com choque de horário.
 pode_se_matricular_turma(Aluno, T2, false) :-
 	matricula(Aluno, T1), 
