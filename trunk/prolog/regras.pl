@@ -40,7 +40,7 @@ choque_turma(T1, T2) :-
 
 %%%%%%%%%%%%%%% Predicados sobre alunos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% pre_matricula_atual(Aluno, Disciplina, Tempo)
+% pre_matricula(Aluno, Disciplina, Tempo)
 %   Significa que o aluno tem interesse em se matricular na disciplina no
 %   próximo período. Na prática, representa que o aluno selecionou a
 %   disciplina na tela de pré-matrícula do sistema.
@@ -67,7 +67,7 @@ choque_turma(T1, T2) :-
 %   momento quando estiver no período de matrícula. Na prática, representa
 %   que o aluno pre_matricula a turma na tela de matrícula do sistema.
 %
-% foi_aprovado(Aluno, Disciplina, VV)
+% foi_aprovado(Aluno, Disciplina, VV) (alguns sao computados)
 %   Significa que o aluno foi aprovado na disciplina.
 %   VV = valor verdade (veja pode_se_matricular_disc).
 %
