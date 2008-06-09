@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : top
+    Created on : 07/06/2008, 20:13:43
+    Author     : Giuseppe
+-->
+<div style="height: 120px; width: 840px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:webuijsf="http://www.sun.com/webui/webuijsf">
+    <f:subview id="top">
+        <webuijsf:image height="112" id="image1" style="border: 1px solid gray; left: 0px; top: 0px; position: absolute" url="/view/web/img/top.png" width="812"/>
+        <webuijsf:staticText id="staticText1"
+            style="color: #000000; font-family: Arial,Helvetica,sans-serif; font-size: 18px; left: 661px; top: 12px; position: absolute; width: 166px; letter-spacing: 0.0;" text="Sistema de&#xa;Planejamento de&#xa;Matrículas com&#xa;Prolog"/>
+    </f:subview>
+</div>

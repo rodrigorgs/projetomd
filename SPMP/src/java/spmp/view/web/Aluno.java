@@ -1,12 +1,16 @@
 /*
- * Home.java
+ * Aluno.java
  *
- * Created on 08/06/2008, 00:19:55
+ * Created on 08/06/2008, 00:23:51
  */
  
 package spmp.view.web;
 
 import com.sun.rave.web.ui.appbase.AbstractPageBean;
+import com.sun.webui.jsf.component.CheckboxGroup;
+import com.sun.webui.jsf.component.PanelLayout;
+import com.sun.webui.jsf.model.MultipleSelectOptionsList;
+import com.sun.webui.jsf.model.Option;
 import javax.faces.FacesException;
 import spmp.ApplicationBean1;
 import spmp.RequestBean1;
@@ -21,7 +25,7 @@ import spmp.SessionBean1;
  *
  * @author Giuseppe
  */
-public class Home extends AbstractPageBean {
+public class Aluno extends AbstractPageBean {
     // <editor-fold defaultstate="collapsed" desc="Managed Component Definition">
 
     /**
@@ -31,13 +35,22 @@ public class Home extends AbstractPageBean {
      */
     private void _init() throws Exception {
     }
+    private PanelLayout layoutPanel1 = new PanelLayout();
+
+    public PanelLayout getLayoutPanel1() {
+        return layoutPanel1;
+    }
+
+    public void setLayoutPanel1(PanelLayout pl) {
+        this.layoutPanel1 = pl;
+    }
 
     // </editor-fold>
 
     /**
      * <p>Construct a new Page bean instance.</p>
      */
-    public Home() {
+    public Aluno() {
     }
 
     /**
@@ -66,7 +79,7 @@ public class Home extends AbstractPageBean {
         try {
             _init();
         } catch (Exception e) {
-            log("Home Initialization Failure", e);
+            log("Aluno Initialization Failure", e);
             throw e instanceof FacesException ? (FacesException) e: new FacesException(e);
         }
         
@@ -97,6 +110,7 @@ public class Home extends AbstractPageBean {
      */
     @Override
     public void prerender() {
+      
     }
 
     /**
@@ -138,7 +152,14 @@ public class Home extends AbstractPageBean {
         return (SessionBean1) getBean("SessionBean1");
     }
 
+    public String tab1_action() {    
+        return null;
+    }
+
+
   
-    
+
+
+
 }
 

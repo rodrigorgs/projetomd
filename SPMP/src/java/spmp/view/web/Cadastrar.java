@@ -1,7 +1,7 @@
 /*
- * Home.java
+ * Administrador.java
  *
- * Created on 08/06/2008, 00:19:55
+ * Created on 07/06/2008, 23:51:09
  */
  
 package spmp.view.web;
@@ -21,7 +21,7 @@ import spmp.SessionBean1;
  *
  * @author Giuseppe
  */
-public class Home extends AbstractPageBean {
+public class Cadastrar extends AbstractPageBean {
     // <editor-fold defaultstate="collapsed" desc="Managed Component Definition">
 
     /**
@@ -37,7 +37,7 @@ public class Home extends AbstractPageBean {
     /**
      * <p>Construct a new Page bean instance.</p>
      */
-    public Home() {
+    public Cadastrar() {
     }
 
     /**
@@ -66,7 +66,7 @@ public class Home extends AbstractPageBean {
         try {
             _init();
         } catch (Exception e) {
-            log("Home Initialization Failure", e);
+            log("Administrador Initialization Failure", e);
             throw e instanceof FacesException ? (FacesException) e: new FacesException(e);
         }
         
@@ -138,7 +138,9 @@ public class Home extends AbstractPageBean {
         return (SessionBean1) getBean("SessionBean1");
     }
 
-  
+
+
+
     
 }
 
