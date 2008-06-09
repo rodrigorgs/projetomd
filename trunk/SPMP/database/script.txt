@@ -1,68 +1,68 @@
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('adm170', 'ADMINISTRACAO CONTABIL I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('adm171', 'ELEMENTOS E ANALISES DE CUSTOS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('adm226', 'GESTAO DE CUSTOS I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('edc242', 'YOGA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('fch162', 'PSICOLOGIA DAS RELACOES HUMANAS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('fis121', 'FISICA  GERAL E EXPERIMENTAL  I-E');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('fis122', 'FISICA  GERAL E EXPERIMENTAL  II-E');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('ics003', 'BIOFISICA III');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('let042', 'LINGUA PORTUGUESA I-A  N-100');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('let049', 'ITALIANO INSTRUMENTAL I  N-100');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('let051', 'FRANCES INSTRUMENTAL I  N-100');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('let053', 'INGLES INSTRUMENTAL I  N-100');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('let359', 'INGLES INSTRUMENTAL IV  N-100');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('leta39', 'INTRODUÇÃO AO ESTUDO DA LINGUA GREGA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('leta41', 'GRAMÁTICA DE LINGUA GREGA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('letb39', 'LINGUA FRANCESA EM NIVEL BÁSICO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat007', 'CÁLCULO IV');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat017', 'ALGEBRA LINEAR I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat018', 'ALGEBRA LINEAR II');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat042', 'CALCULO  II- A');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat043', 'CALCULO  III- A');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat044', 'ALGEBRA  LINEAR  I  A');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat046', 'ESTATISTICA III D');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat051', 'PROJETOS DE CIRCUITOS LOGICOS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat052', 'ESTUDO  COMPARATIVO DE LINGUAGENS DE PROGRAMACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat053', 'ANALISE DE PROJETO DE ALGORITMOS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat054', 'INTELIGENCIA  ARTIFICIAL');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat055', 'REDES DE COMPUTADORES');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat056', 'COMPUTACAO GRAFICA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat057', 'PROJETO FINAL');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat061', 'TOPICOS EM ENGENHARIA DE SOFTWARE');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat062', 'TOPICOS EM SISTEMAS OPERACIONAIS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat112', 'ESTRUTURAS DE DADOS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat144', 'ALGEBRA I A');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat146', 'INTRODUCAO  A  LOGICA DE PROGRAMACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat147', 'LINGUAGENS DE PROGRAMACAO I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat148', 'LINGUAGENS DE PROGRAMACAO II');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat149', 'LINGUAGENS DE MONTAGEM');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat150', 'INTRODUCAO AOS SISTEMAS DE COMPUTACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat151', 'ARQUITETURA DE COMPUTADORES');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat152', 'ESTRUTURAS DE ARQUIVOS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat153', 'CONSTRUCAO DE COMPILADORES');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat154', 'SISTEMAS OPERACIONAIS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat155', 'PROGRAMACAO MATEMATICA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat156', 'TEORIA DOS GRAFOS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat157', 'LINGUAGENS  FORMAIS E TEORIA DA COMPILACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat158', 'TEORIA DA COMPUTACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat159', 'COMPUTADORES E SOCIEDADE');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat160', 'MODELOS  PROBABILISTICOS DE PESQUISA  OPERACIONAL');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat161', 'ENGENHARIA DE PROGRAMACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat162', 'ANALISE E PROJETO DE SISTEMAS DE INFORMACAO I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat163', 'ANALISE E PROJETO DE SISTEMAS DE INFORMACAO  II');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat164', 'TELEPROCESSAMENTO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat165', 'BANCO DE DADOS');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat167', 'TOPICOS EM CIENCIA DA COMPUTACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat169', 'TOPICOS SISTEMAS DE COMPUTACAO');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat174', 'CALCULO  NUMÉRICO  I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat191', 'MATEMATICA FINANCEIRA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat195', 'CÁLCULO DIFERENCIAL INTEGRAL I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat208', 'GEOMETRIA DIFERENCIAL');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mat220', 'EMPREENDEDORES EM INFORMATICA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mata01', 'GEOMETRIA  ANALÍTICA');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mus128', 'CORAL UNIVERSITARIO I');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('mus129', 'CORAL UNIVERSITARIO II');
-INSERT INTO disciplina (idDisciplina, nome) VALUES ('qui037', 'QUÍMICA GERAL');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('adm170', '\'ADM170\'', '\'ADMINISTRACAO CONTABIL I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('adm171', '\'ADM171\'', '\'ELEMENTOS E ANALISES DE CUSTOS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('adm226', '\'ADM226\'', '\'GESTAO DE CUSTOS I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('edc242', '\'EDC242\'', '\'YOGA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('fch162', '\'FCH162\'', '\'PSICOLOGIA DAS RELACOES HUMANAS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('fis121', '\'FIS121\'', '\'FISICA  GERAL E EXPERIMENTAL  I-E\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('fis122', '\'FIS122\'', '\'FISICA  GERAL E EXPERIMENTAL  II-E\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('ics003', '\'ICS003\'', '\'BIOFISICA III\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('let042', '\'LET042\'', '\'LINGUA PORTUGUESA I-A  N-100\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('let049', '\'LET049\'', '\'ITALIANO INSTRUMENTAL I  N-100\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('let051', '\'LET051\'', '\'FRANCES INSTRUMENTAL I  N-100\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('let053', '\'LET053\'', '\'INGLES INSTRUMENTAL I  N-100\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('let359', '\'LET359\'', '\'INGLES INSTRUMENTAL IV  N-100\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('leta39', '\'LETA39\'', '\'INTRODUÇÃO AO ESTUDO DA LINGUA GREGA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('leta41', '\'LETA41\'', '\'GRAMÁTICA DE LINGUA GREGA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('letb39', '\'LETB39\'', '\'LINGUA FRANCESA EM NIVEL BÁSICO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat007', '\'MAT007\'', '\'CÁLCULO IV\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat017', '\'MAT017\'', '\'ALGEBRA LINEAR I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat018', '\'MAT018\'', '\'ALGEBRA LINEAR II\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat042', '\'MAT042\'', '\'CALCULO  II- A\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat043', '\'MAT043\'', '\'CALCULO  III- A\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat044', '\'MAT044\'', '\'ALGEBRA  LINEAR  I  A\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat046', '\'MAT046\'', '\'ESTATISTICA III D\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat051', '\'MAT051\'', '\'PROJETOS DE CIRCUITOS LOGICOS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat052', '\'MAT052\'', '\'ESTUDO  COMPARATIVO DE LINGUAGENS DE PROGRAMACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat053', '\'MAT053\'', '\'ANALISE DE PROJETO DE ALGORITMOS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat054', '\'MAT054\'', '\'INTELIGENCIA  ARTIFICIAL\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat055', '\'MAT055\'', '\'REDES DE COMPUTADORES\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat056', '\'MAT056\'', '\'COMPUTACAO GRAFICA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat057', '\'MAT057\'', '\'PROJETO FINAL\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat061', '\'MAT061\'', '\'TOPICOS EM ENGENHARIA DE SOFTWARE\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat062', '\'MAT062\'', '\'TOPICOS EM SISTEMAS OPERACIONAIS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat112', '\'MAT112\'', '\'ESTRUTURAS DE DADOS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat144', '\'MAT144\'', '\'ALGEBRA I A\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat146', '\'MAT146\'', '\'INTRODUCAO  A  LOGICA DE PROGRAMACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat147', '\'MAT147\'', '\'LINGUAGENS DE PROGRAMACAO I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat148', '\'MAT148\'', '\'LINGUAGENS DE PROGRAMACAO II\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat149', '\'MAT149\'', '\'LINGUAGENS DE MONTAGEM\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat150', '\'MAT150\'', '\'INTRODUCAO AOS SISTEMAS DE COMPUTACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat151', '\'MAT151\'', '\'ARQUITETURA DE COMPUTADORES\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat152', '\'MAT152\'', '\'ESTRUTURAS DE ARQUIVOS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat153', '\'MAT153\'', '\'CONSTRUCAO DE COMPILADORES\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat154', '\'MAT154\'', '\'SISTEMAS OPERACIONAIS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat155', '\'MAT155\'', '\'PROGRAMACAO MATEMATICA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat156', '\'MAT156\'', '\'TEORIA DOS GRAFOS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat157', '\'MAT157\'', '\'LINGUAGENS  FORMAIS E TEORIA DA COMPILACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat158', '\'MAT158\'', '\'TEORIA DA COMPUTACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat159', '\'MAT159\'', '\'COMPUTADORES E SOCIEDADE\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat160', '\'MAT160\'', '\'MODELOS  PROBABILISTICOS DE PESQUISA  OPERACIONAL\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat161', '\'MAT161\'', '\'ENGENHARIA DE PROGRAMACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat162', '\'MAT162\'', '\'ANALISE E PROJETO DE SISTEMAS DE INFORMACAO I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat163', '\'MAT163\'', '\'ANALISE E PROJETO DE SISTEMAS DE INFORMACAO  II\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat164', '\'MAT164\'', '\'TELEPROCESSAMENTO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat165', '\'MAT165\'', '\'BANCO DE DADOS\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat167', '\'MAT167\'', '\'TOPICOS EM CIENCIA DA COMPUTACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat169', '\'MAT169\'', '\'TOPICOS SISTEMAS DE COMPUTACAO\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat174', '\'MAT174\'', '\'CALCULO  NUMÉRICO  I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat191', '\'MAT191\'', '\'MATEMATICA FINANCEIRA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat195', '\'MAT195\'', '\'CÁLCULO DIFERENCIAL INTEGRAL I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat208', '\'MAT208\'', '\'GEOMETRIA DIFERENCIAL\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mat220', '\'MAT220\'', '\'EMPREENDEDORES EM INFORMATICA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mata01', '\'MATA01\'', '\'GEOMETRIA  ANALÍTICA\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mus128', '\'MUS128\'', '\'CORAL UNIVERSITARIO I\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mus129', '\'MUS129\'', '\'CORAL UNIVERSITARIO II\'');
+INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('qui037', '\'QUI037\'', '\'QUÍMICA GERAL\'');
 
 
 
@@ -117,110 +117,272 @@ INSERT INTO prerequisito (idDisciplinaPre, idDisciplinaPos) VALUES ('mat165', 'm
 
 
 
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm170', 'adm170030000', 'sex', 13, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm171', 'adm170010000', 'qua', 18, 20);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm171', 'adm170010000', 'seg', 18, 20);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fch162', 'fch162040000', 'sex', 13, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121181800', 'qua', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121181800', 'seg', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121181800', 'sex', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121181900', 'qua', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121181900', 'seg', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121181900', 'sex', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121363700', 'qua', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121363700', 'seg', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121', 'fis121363700', 'sex', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122', 'fis122040800', 'qua', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122', 'fis122040800', 'seg', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122', 'fis122040800', 'sex', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('let053', 'let051010000', 'seg', 17, 20);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('let359', 'let053010000', 'sex', 7, 10);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('let359', 'let359020000', 'sex', 10, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('leta39', 'let359010000', 'sex', 7, 10);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('leta41', 'leta39010000', 'qua', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('leta41', 'leta39010000', 'sex', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017', 'mat007020200', 'qui', 7, 9);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017', 'mat007020200', 'ter', 7, 9);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017', 'mat017040400', 'qui', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017', 'mat017040400', 'ter', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat018', 'mat017020200', 'qui', 7, 9);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat018', 'mat017020200', 'ter', 7, 9);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042', 'mat018020200', 'qui', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042', 'mat018020200', 'ter', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042', 'mat042070700', 'qua', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042', 'mat042070700', 'seg', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042', 'mat042070700', 'sex', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051', 'mat046010100', 'qua', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051', 'mat046010100', 'seg', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051', 'mat046010100', 'sex', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051', 'mat051020200', 'qui', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051', 'mat051020200', 'ter', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat052', 'mat051010100', 'qua', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat052', 'mat051010100', 'seg', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat053', 'mat052010100', 'qua', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat053', 'mat052010100', 'seg', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat054', 'mat053010100', 'qua', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat054', 'mat053010100', 'seg', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat055', 'mat054010100', 'qua', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat055', 'mat054010100', 'seg', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat056', 'mat055010100', 'qua', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat056', 'mat055010100', 'seg', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat057', 'mat056010100', 'qua', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat057', 'mat056010100', 'ter', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat057', 'mat057020200', 'cmb', 0, 23);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat061', 'mat057010100', 'cmb', 0, 23);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat062', 'mat061010100', 'qui', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat062', 'mat061010100', 'ter', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112', 'mat062010100', 'qui', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112', 'mat062010100', 'ter', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112', 'mat112020200', 'qui', 10, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112', 'mat112020200', 'ter', 10, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat144', 'mat112010100', 'qui', 7, 10);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat144', 'mat112010100', 'ter', 7, 10);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat146', 'mat144010100', 'qua', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat146', 'mat144010100', 'seg', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat146', 'mat144010100', 'sex', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat147', 'mat146010100', 'qui', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat147', 'mat146010100', 'ter', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat148', 'mat147010100', 'qui', 14, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat148', 'mat147010100', 'ter', 14, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat149', 'mat148010100', 'qua', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat149', 'mat148010100', 'seg', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat150', 'mat149010100', 'qui', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat150', 'mat149010100', 'ter', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat151', 'mat150010100', 'qui', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat151', 'mat150010100', 'ter', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat152', 'mat151010100', 'qua', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat152', 'mat151010100', 'seg', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat153', 'mat152010100', 'qui', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat153', 'mat152010100', 'ter', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat154', 'mat153010100', 'qua', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat154', 'mat153010100', 'seg', 15, 17);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat156', 'mat155010000', 'qua', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat156', 'mat155010000', 'seg', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat158', 'mat157010100', 'qui', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat158', 'mat157010100', 'ter', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat160', 'mat159010000', 'sex', 13, 16);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat162', 'mat161010100', 'qua', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat162', 'mat161010100', 'seg', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat163', 'mat162010100', 'qui', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat163', 'mat162010100', 'ter', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat164', 'mat163010100', 'qui', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat164', 'mat163010100', 'ter', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat165', 'mat164010100', 'qua', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat165', 'mat164010100', 'seg', 17, 19);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat167', 'mat165010100', 'qui', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat167', 'mat165010100', 'ter', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat169', 'mat167010100', 'qua', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat169', 'mat167010100', 'seg', 11, 13);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat174', 'mat169010100', 'qua', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat174', 'mat169010100', 'seg', 9, 11);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220', 'mat208010100', 'qua', 7, 9);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220', 'mat208010100', 'seg', 7, 9);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220', 'mat208010100', 'sex', 7, 9);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220', 'mat220020200', 'qui', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220', 'mat220020200', 'ter', 13, 15);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mus129', 'mus128010100', 'qua', 19, 22);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('mus129', 'mus128010100', 'seg', 19, 21);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('qui037', 'mus129010100', 'qua', 19, 22);
-INSERT INTO turma (idDisciplina, idTurma, diaSemana, horaInicio, horaFim) VALUES ('qui037', 'mus129010100', 'seg', 19, 21);
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('adm170', 'adm170030000', '\'030000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('adm171', 'adm170010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('adm171', 'adm170010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fch162', 'fch162040000', '\'040000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121181800', '\'181800\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121181800', '\'181800\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121181800', '\'181800\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121181900', '\'181900\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121181900', '\'181900\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121181900', '\'181900\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121363700', '\'363700\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121363700', '\'363700\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis121', 'fis121363700', '\'363700\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis122', 'fis122040800', '\'040800\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis122', 'fis122040800', '\'040800\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('fis122', 'fis122040800', '\'040800\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('let053', 'let051010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('let359', 'let053010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('let359', 'let359020000', '\'020000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('leta39', 'let359010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('leta41', 'leta39010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('leta41', 'leta39010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat017', 'mat007020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat017', 'mat007020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat017', 'mat017040400', '\'040400\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat017', 'mat017040400', '\'040400\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat018', 'mat017020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat018', 'mat017020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat042', 'mat018020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat042', 'mat018020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat042', 'mat042070700', '\'070700\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat042', 'mat042070700', '\'070700\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat042', 'mat042070700', '\'070700\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat051', 'mat046010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat051', 'mat046010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat051', 'mat046010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat051', 'mat051020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat051', 'mat051020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat052', 'mat051010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat052', 'mat051010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat053', 'mat052010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat053', 'mat052010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat054', 'mat053010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat054', 'mat053010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat055', 'mat054010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat055', 'mat054010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat056', 'mat055010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat056', 'mat055010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat057', 'mat056010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat057', 'mat056010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat057', 'mat057020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat061', 'mat057010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat062', 'mat061010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat062', 'mat061010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat112', 'mat062010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat112', 'mat062010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat112', 'mat112020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat112', 'mat112020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat144', 'mat112010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat144', 'mat112010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat146', 'mat144010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat146', 'mat144010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat146', 'mat144010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat147', 'mat146010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat147', 'mat146010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat148', 'mat147010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat148', 'mat147010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat149', 'mat148010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat149', 'mat148010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat150', 'mat149010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat150', 'mat149010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat151', 'mat150010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat151', 'mat150010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat152', 'mat151010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat152', 'mat151010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat153', 'mat152010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat153', 'mat152010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat154', 'mat153010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat154', 'mat153010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat156', 'mat155010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat156', 'mat155010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat158', 'mat157010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat158', 'mat157010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat160', 'mat159010000', '\'010000\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat162', 'mat161010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat162', 'mat161010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat163', 'mat162010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat163', 'mat162010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat164', 'mat163010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat164', 'mat163010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat165', 'mat164010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat165', 'mat164010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat167', 'mat165010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat167', 'mat165010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat169', 'mat167010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat169', 'mat167010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat174', 'mat169010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat174', 'mat169010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat220', 'mat208010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat220', 'mat208010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat220', 'mat208010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat220', 'mat220020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mat220', 'mat220020200', '\'020200\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mus129', 'mus128010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('mus129', 'mus128010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('qui037', 'mus129010100', '\'010100\'');
+INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('qui037', 'mus129010100', '\'010100\'');
+
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm170010000', 'seg', 18, 20).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm170010000', 'qua', 18, 20).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm170030000', 'sex', 13, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm171010000', 'seg', 20, 22).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm171010000', 'qua', 20, 22).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm226020000', 'ter', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm226020000', 'qui', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('edc242010100', 'seg', 16, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('edc242010100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fch162030000', 'seg', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fch162030000', 'qua', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fch162040000', 'sex', 13, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121141400', 'seg', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121141400', 'qua', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121141400', 'sex', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121181800', 'seg', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121181800', 'qua', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121181800', 'sex', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121181900', 'seg', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121181900', 'qua', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121181900', 'sex', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121363700', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121363700', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis121363700', 'sex', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122040700', 'seg', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122040700', 'qua', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122040700', 'sex', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122040800', 'seg', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122040800', 'qua', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('fis122040800', 'sex', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('ics003010400', 'seg', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('ics003010400', 'sex', 7, 12).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('let042010000', 'sex', 7, 10).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('let049030000', 'sex', 13, 16).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('let051010000', 'seg', 17, 20).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('let053010000', 'sex', 7, 10).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('let359010000', 'sex', 7, 10).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('let359020000', 'sex', 10, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('leta39010000', 'qua', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('leta39010000', 'sex', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('leta41010000', 'qua', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('leta41010000', 'sex', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('letb39000100', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('letb39000100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('letb39000100', 'sex', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat007020200', 'ter', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat007020200', 'qui', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017020200', 'ter', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017020200', 'qui', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017040400', 'ter', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat017040400', 'qui', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat018020200', 'ter', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat018020200', 'qui', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042020200', 'seg', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042020200', 'qua', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042020200', 'sex', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042070700', 'seg', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042070700', 'qua', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat042070700', 'sex', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat043090900', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat043090900', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat043090900', 'sex', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat044030300', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat044030300', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat046010100', 'seg', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat046010100', 'qua', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat046010100', 'sex', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051010100', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051010100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051020200', 'ter', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat051020200', 'qui', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat052010100', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat052010100', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat053010100', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat053010100', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat054010100', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat054010100', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat055010100', 'seg', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat055010100', 'qua', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat056010100', 'ter', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat056010100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat057010100', 'cmb', 0, 23).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat057020200', 'cmb', 0, 23).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat061010100', 'ter', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat061010100', 'qui', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat062010100', 'ter', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat062010100', 'qui', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112010100', 'ter', 7, 10).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112010100', 'qui', 7, 10).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112020200', 'ter', 10, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat112020200', 'qui', 10, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat144010100', 'seg', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat144010100', 'qua', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat144010100', 'sex', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat146010100', 'ter', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat146010100', 'qui', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat147010100', 'ter', 14, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat147010100', 'qui', 14, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat148010100', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat148010100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat149010100', 'ter', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat149010100', 'qui', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat150010100', 'ter', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat150010100', 'qui', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat151010100', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat151010100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat152010100', 'ter', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat152010100', 'qui', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat153010100', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat153010100', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat154010100', 'ter', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat154010100', 'qui', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat155010000', 'seg', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat155010000', 'qua', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat156010000', 'ter', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat156010000', 'qui', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat157010100', 'ter', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat157010100', 'qui', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat158010100', 'ter', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat158010100', 'qui', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat159010000', 'sex', 13, 16).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat160010000', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat160010000', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat161010100', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat161010100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat162010100', 'ter', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat162010100', 'qui', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat163010100', 'ter', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat163010100', 'qui', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat164010100', 'seg', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat164010100', 'qua', 17, 19).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat165010100', 'ter', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat165010100', 'qui', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat167010100', 'seg', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat167010100', 'qua', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat169010100', 'seg', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat169010100', 'qua', 9, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat174010100', 'ter', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat174010100', 'qui', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat191040400', 'ter', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat191040400', 'qui', 11, 13).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat195111100', 'seg', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat195111100', 'qua', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat195111100', 'sex', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat208010100', 'seg', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat208010100', 'qua', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat208010100', 'sex', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220010100', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220010100', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220020200', 'ter', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mat220020200', 'qui', 13, 15).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mata01090000', 'seg', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mata01090000', 'qua', 15, 17).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mus128010100', 'seg', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mus128010100', 'qua', 19, 22).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mus129010100', 'seg', 19, 21).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('mus129010100', 'qua', 19, 22).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('qui037010100', 'seg', 7, 11).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('qui037010100', 'qua', 7, 9).
+INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('qui037010100', 'sex', 7, 9).
+
