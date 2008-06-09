@@ -14,18 +14,18 @@ import javax.persistence.Embeddable;
  * @author Stefani Pires
  */
 @Embeddable
-public class MatriculaPK implements Serializable {
+public class HistoricoPK implements Serializable {
     @Column(name = "idAluno", nullable = false)
     private String idAluno;
-    @Column(name = "idTurma", nullable = false)
-    private String idTurma;
+    @Column(name = "idDisciplina", nullable = false)
+    private String idDisciplina;
 
-    public MatriculaPK() {
+    public HistoricoPK() {
     }
 
-    public MatriculaPK(String idAluno, String idTurma) {
+    public HistoricoPK(String idAluno, String idDisciplina) {
         this.idAluno = idAluno;
-        this.idTurma = idTurma;
+        this.idDisciplina = idDisciplina;
     }
 
     public String getIdAluno() {
@@ -36,33 +36,33 @@ public class MatriculaPK implements Serializable {
         this.idAluno = idAluno;
     }
 
-    public String getIdTurma() {
-        return idTurma;
+    public String getIdDisciplina() {
+        return idDisciplina;
     }
 
-    public void setIdTurma(String idTurma) {
-        this.idTurma = idTurma;
+    public void setIdDisciplina(String idDisciplina) {
+        this.idDisciplina = idDisciplina;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (idAluno != null ? idAluno.hashCode() : 0);
-        hash += (idTurma != null ? idTurma.hashCode() : 0);
+        hash += (idDisciplina != null ? idDisciplina.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof MatriculaPK)) {
+        if (!(object instanceof HistoricoPK)) {
             return false;
         }
-        MatriculaPK other = (MatriculaPK) object;
+        HistoricoPK other = (HistoricoPK) object;
         if ((this.idAluno == null && other.idAluno != null) || (this.idAluno != null && !this.idAluno.equals(other.idAluno))) {
             return false;
         }
-        if ((this.idTurma == null && other.idTurma != null) || (this.idTurma != null && !this.idTurma.equals(other.idTurma))) {
+        if ((this.idDisciplina == null && other.idDisciplina != null) || (this.idDisciplina != null && !this.idDisciplina.equals(other.idDisciplina))) {
             return false;
         }
         return true;
@@ -70,7 +70,7 @@ public class MatriculaPK implements Serializable {
 
     @Override
     public String toString() {
-        return "spmp.bean.MatriculaPK[idAluno=" + idAluno + ", idTurma=" + idTurma + "]";
+        return "spmp.bean.HistoricoPK[idAluno=" + idAluno + ", idDisciplina=" + idDisciplina + "]";
     }
 
 }

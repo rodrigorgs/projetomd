@@ -7,14 +7,13 @@ package spmp.bean;
 
 import java.io.Serializable;
 import java.util.Collection;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -39,9 +38,10 @@ public class Aluno implements Serializable {
     private String email;
     @Column(name = "senha", nullable = false)
     private String senha;
-    @JoinTable(name = "pre_matricula", joinColumns = {@JoinColumn(name = "idAluno", referencedColumnName = "idAluno")}, inverseJoinColumns = {@JoinColumn(name = "idDisciplina", referencedColumnName = "idDisciplina")})
-    @ManyToMany
-    private Collection<Disciplina> idDisciplinaCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "aluno")
+    private Collection<PreMatricula> preMatriculaCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "aluno")
+    private Collection<Historico> historicoCollection;
 
     public Aluno() {
     }
@@ -89,12 +89,20 @@ public class Aluno implements Serializable {
         this.senha = senha;
     }
 
-    public Collection<Disciplina> getIdDisciplinaCollection() {
-        return idDisciplinaCollection;
+    public Collection<PreMatricula> getPreMatriculaCollection() {
+        return preMatriculaCollection;
     }
 
-    public void setIdDisciplinaCollection(Collection<Disciplina> idDisciplinaCollection) {
-        this.idDisciplinaCollection = idDisciplinaCollection;
+    public void setPreMatriculaCollection(Collection<PreMatricula> preMatriculaCollection) {
+        this.preMatriculaCollection = preMatriculaCollection;
+    }
+
+    public Collection<Historico> getHistoricoCollection() {
+        return historicoCollection;
+    }
+
+    public void setHistoricoCollection(Collection<Historico> historicoCollection) {
+        this.historicoCollection = historicoCollection;
     }
 
     @Override

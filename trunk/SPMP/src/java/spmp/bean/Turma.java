@@ -6,13 +6,16 @@
 package spmp.bean;
 
 import java.io.Serializable;
+import java.util.Collection;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -21,88 +24,68 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "turma")
-@NamedQueries({@NamedQuery(name = "Turma.findByIdDisciplina", query = "SELECT t FROM Turma t WHERE t.turmaPK.idDisciplina = :idDisciplina"), 
-@NamedQuery(name = "Turma.findByIdTurma", query = "SELECT t FROM Turma t WHERE t.turmaPK.idTurma = :idTurma"), 
-@NamedQuery(name = "Turma.findByDiaSemana", query = "SELECT t FROM Turma t WHERE t.diaSemana = :diaSemana"), 
-@NamedQuery(name = "Turma.findByHoraInicio", query = "SELECT t FROM Turma t WHERE t.horaInicio = :horaInicio"), 
-@NamedQuery(name = "Turma.findByHoraFim", query = "SELECT t FROM Turma t WHERE t.horaFim = :horaFim")})
-
+@NamedQueries({@NamedQuery(name = "Turma.findByIdTurma", query = "SELECT t FROM Turma t WHERE t.idTurma = :idTurma"), @NamedQuery(name = "Turma.findByCodTurma", query = "SELECT t FROM Turma t WHERE t.codTurma = :codTurma")})
 public class Turma implements Serializable {
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected TurmaPK turmaPK;
-    @Column(name = "diaSemana", nullable = false)
-    private String diaSemana;
-    @Column(name = "horaInicio", nullable = false)
-    private int horaInicio;
-    @Column(name = "horaFim", nullable = false)
-    private int horaFim;
-    @JoinColumn(name = "idDisciplina", referencedColumnName = "idDisciplina", insertable = false, updatable = false)
+    @Id
+    @Column(name = "idTurma", nullable = false)
+    private String idTurma;
+    @Column(name = "codTurma", nullable = false)
+    private String codTurma;
+    @JoinColumn(name = "idDisciplina", referencedColumnName = "idDisciplina")
     @ManyToOne
-    private Disciplina disciplina;
+    private Disciplina idDisciplina;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "turma")
+    private Collection<Horario> horarioCollection;
 
     public Turma() {
     }
 
-    public Turma(TurmaPK turmaPK) {
-        this.turmaPK = turmaPK;
+    public Turma(String idTurma) {
+        this.idTurma = idTurma;
     }
 
-    public Turma(TurmaPK turmaPK, String diaSemana, int horaInicio, int horaFim) {
-        this.turmaPK = turmaPK;
-        this.diaSemana = diaSemana;
-        this.horaInicio = horaInicio;
-        this.horaFim = horaFim;
+    public Turma(String idTurma, String codTurma) {
+        this.idTurma = idTurma;
+        this.codTurma = codTurma;
     }
 
-    public Turma(String idDisciplina, String idTurma) {
-        this.turmaPK = new TurmaPK(idDisciplina, idTurma);
+    public String getIdTurma() {
+        return idTurma;
     }
 
-    public TurmaPK getTurmaPK() {
-        return turmaPK;
+    public void setIdTurma(String idTurma) {
+        this.idTurma = idTurma;
     }
 
-    public void setTurmaPK(TurmaPK turmaPK) {
-        this.turmaPK = turmaPK;
+    public String getCodTurma() {
+        return codTurma;
     }
 
-    public String getDiaSemana() {
-        return diaSemana;
+    public void setCodTurma(String codTurma) {
+        this.codTurma = codTurma;
     }
 
-    public void setDiaSemana(String diaSemana) {
-        this.diaSemana = diaSemana;
+    public Disciplina getIdDisciplina() {
+        return idDisciplina;
     }
 
-    public int getHoraInicio() {
-        return horaInicio;
+    public void setIdDisciplina(Disciplina idDisciplina) {
+        this.idDisciplina = idDisciplina;
     }
 
-    public void setHoraInicio(int horaInicio) {
-        this.horaInicio = horaInicio;
+    public Collection<Horario> getHorarioCollection() {
+        return horarioCollection;
     }
 
-    public int getHoraFim() {
-        return horaFim;
-    }
-
-    public void setHoraFim(int horaFim) {
-        this.horaFim = horaFim;
-    }
-
-    public Disciplina getDisciplina() {
-        return disciplina;
-    }
-
-    public void setDisciplina(Disciplina disciplina) {
-        this.disciplina = disciplina;
+    public void setHorarioCollection(Collection<Horario> horarioCollection) {
+        this.horarioCollection = horarioCollection;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (turmaPK != null ? turmaPK.hashCode() : 0);
+        hash += (idTurma != null ? idTurma.hashCode() : 0);
         return hash;
     }
 
@@ -113,7 +96,7 @@ public class Turma implements Serializable {
             return false;
         }
         Turma other = (Turma) object;
-        if ((this.turmaPK == null && other.turmaPK != null) || (this.turmaPK != null && !this.turmaPK.equals(other.turmaPK))) {
+        if ((this.idTurma == null && other.idTurma != null) || (this.idTurma != null && !this.idTurma.equals(other.idTurma))) {
             return false;
         }
         return true;
@@ -121,7 +104,7 @@ public class Turma implements Serializable {
 
     @Override
     public String toString() {
-        return "spmp.bean.Turma[turmaPK=" + turmaPK + "]";
+        return "spmp.bean.Turma[idTurma=" + idTurma + "]";
     }
 
 }
