@@ -64,6 +64,44 @@ INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mus128', '\'
 INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('mus129', '\'MUS129\'', '\'CORAL UNIVERSITARIO II\'');
 INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('qui037', '\'QUI037\'', '\'QUÍMICA GERAL\'');
 
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('fis121', 1).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat002', 1).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat146', 1).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat150', 1).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat195', 1).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('fis122', 2).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat017', 2).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat042', 2).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat112', 2).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat018', 3).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat043', 3).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat051', 3).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat144', 3).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat147', 3).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat046', 4).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat052', 4).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat056', 4).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat151', 4).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat158', 4).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat174', 4).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat053', 5).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat148', 5).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat155', 5).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat157', 5).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat161', 5).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat152', 6).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat153', 6).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat156', 6).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat159', 6).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat162', 6).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat164', 6).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat054', 7).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat055', 7).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat154', 7).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat160', 7).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat163', 7).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat165', 7).
+INSERT INTO semestre_sugerido (idDisciplina, semestre) VALUES ('mat057', 8).
 
 
 INSERT INTO prerequisito (idDisciplinaPre, idDisciplinaPos) VALUES ('fis121', 'fis122');
