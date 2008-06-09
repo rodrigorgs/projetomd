@@ -1,0 +1,56 @@
+CREATE DATABASE `spmp` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+DROP TABLE IF EXISTS `spmp`.`aluno`;
+CREATE TABLE  `spmp`.`aluno` (
+  `idAluno` varchar(45) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `senha` varchar(45) NOT NULL,
+  PRIMARY KEY  (`idAluno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `spmp`.`disciplina`;
+CREATE TABLE  `spmp`.`disciplina` (
+  `idDisciplina` varchar(6) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `semestre` int(10) unsigned default NULL,
+  PRIMARY KEY  (`idDisciplina`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `spmp`.`turma`;
+CREATE TABLE  `spmp`.`turma` (
+  `idDisciplina` varchar(6) NOT NULL,
+  `idTurma` varchar(12) NOT NULL,
+  `diaSemana` varchar(45) NOT NULL,
+  `horaInicio` int(10) unsigned NOT NULL,
+  `horaFim` int(10) unsigned NOT NULL,
+  PRIMARY KEY  USING BTREE (`idDisciplina`,`idTurma`,`diaSemana`,`horaInicio`,`horaFim`),
+  CONSTRAINT `FK_turma_1` FOREIGN KEY (`idDisciplina`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `spmp`.`prerequisito`;
+CREATE TABLE  `spmp`.`prerequisito` (
+  `idDisciplinaPre` varchar(6) NOT NULL,
+  `idDisciplinaPos` varchar(6) NOT NULL,
+  PRIMARY KEY  (`idDisciplinaPre`,`idDisciplinaPos`),
+  KEY `FK_prerequisito_2` (`idDisciplinaPos`),
+  CONSTRAINT `FK_prerequisito_1` FOREIGN KEY (`idDisciplinaPre`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_prerequisito_2` FOREIGN KEY (`idDisciplinaPos`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `spmp`.`matricula`;
+CREATE TABLE  `spmp`.`matricula` (
+  `idAluno` varchar(45) NOT NULL,
+  `idTurma` varchar(12) NOT NULL,
+  PRIMARY KEY  (`idAluno`,`idTurma`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `spmp`.`pre_matricula`;
+CREATE TABLE  `spmp`.`pre_matricula` (
+  `idAluno` varchar(45) NOT NULL,
+  `idDisciplina` varchar(12) NOT NULL,
+  PRIMARY KEY  (`idAluno`,`idDisciplina`),
+  KEY `FK_pre_matricula_2` (`idDisciplina`),
+  CONSTRAINT `FK_pre_matricula_1` FOREIGN KEY (`idAluno`) REFERENCES `aluno` (`idAluno`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_pre_matricula_2` FOREIGN KEY (`idDisciplina`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
