@@ -8,6 +8,7 @@ package spmp.view.web;
 
 import com.sun.rave.web.ui.appbase.AbstractPageBean;
 import com.sun.webui.jsf.component.CheckboxGroup;
+import com.sun.webui.jsf.component.Form;
 import com.sun.webui.jsf.component.PanelLayout;
 import com.sun.webui.jsf.model.MultipleSelectOptionsList;
 import com.sun.webui.jsf.model.Option;
@@ -43,6 +44,15 @@ public class Aluno extends AbstractPageBean {
 
     public void setLayoutPanel1(PanelLayout pl) {
         this.layoutPanel1 = pl;
+    }
+    private Form form1 = new Form();
+
+    public Form getForm1() {
+        return form1;
+    }
+
+    public void setForm1(Form f) {
+        this.form1 = f;
     }
 
     // </editor-fold>

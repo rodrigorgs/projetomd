@@ -7,6 +7,7 @@
 package spmp.view.web;
 
 import com.sun.rave.web.ui.appbase.AbstractPageBean;
+import com.sun.webui.jsf.component.Form;
 import javax.faces.FacesException;
 import spmp.ApplicationBean1;
 import spmp.RequestBean1;
@@ -30,6 +31,15 @@ public class Cadastrar extends AbstractPageBean {
      * here is subject to being replaced.</p>
      */
     private void _init() throws Exception {
+    }
+    private Form form1 = new Form();
+
+    public Form getForm1() {
+        return form1;
+    }
+
+    public void setForm1(Form f) {
+        this.form1 = f;
     }
 
     // </editor-fold>

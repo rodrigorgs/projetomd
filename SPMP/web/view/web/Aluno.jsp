@@ -33,4 +33,5 @@
             </webuijsf:html>
         </webuijsf:page>
     </f:view>
+    <webuijsf:form binding="#{view$web$Aluno.form1}" id="form1"/>
 </jsp:root>

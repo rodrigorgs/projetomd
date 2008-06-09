@@ -28,4 +28,5 @@
             </webuijsf:html>
         </webuijsf:page>
     </f:view>
+    <webuijsf:form binding="#{view$web$Cadastrar.form1}" id="form1"/>
 </jsp:root>
