@@ -16,18 +16,18 @@
 % Disciplina
 %   - disciplina(disc, codigo, nome)
 %   - semestre_sugerido(disc, numero_semestre)
-%   - eh_prerequisito_direto(disc, disc)
+%   - prerequisito(disc, disc)
 %   - eh_prerequisito_trans(disc, disc) -- PREDICADO COMPUTADO
 %
 % Turma
-%   - turma(turma, disc, codigo)
+%   - turma(disc, turma, codigo)
 %   - horario(turma, dia, inicio, fim)
 %     (o intervalo da aula é fechado em inicio e aberto em fim.)
 %
 %%%
 
-eh_prerequisito_trans(A, C) :- eh_prerequisito_direto(A, C).
-eh_prerequisito_trans(A, C) :- eh_prerequisito_direto(A, B), eh_prerequisito_trans(B, C).
+eh_prerequisito_trans(A, C) :- prerequisito(A, C).
+eh_prerequisito_trans(A, C) :- prerequisito(A, B), eh_prerequisito_trans(B, C).
 
 % Define se há interseção entre dois intervalos de tempo [A1, A2) e [B1, B2).
 choque(A1, A2, B1, B2) :- A2 > B1, A1 < B2.
@@ -155,7 +155,7 @@ foi_aprovado(Aluno, Disciplina, false) :-
 
 % predicado para facilitar consulta Java
 turmas_para_aluno(Aluno, Turma) :-
-	turma(Turma, Disciplina, Codigo),
+	turma(Disciplina, Turma, _),
 	pre_matricula(Aluno, Disciplina, presente).
 
 % Ninguém pode se matricular em duas turmas com choque de horário.
@@ -166,14 +166,14 @@ pode_se_matricular_turma(Aluno, T2, false) :-
 % Ninguém pode se matricular em duas turmas da mesma disciplina.
 pode_se_matricular_turma(Aluno, T2, false) :-
 	matricula(Aluno, T1),
-	turma(T1, Disciplina, _),
-	turma(T2, Disciplina, _).
+	turma(Disciplina, T1, _),
+	turma(Disciplina, T2, _).
 
 % Se não está escolheu a disciplina na pré-matrícula, não pode se matricular
 % nas suas turmas.
 pode_se_matricular_turma(Aluno, Turma, false) :-
 	not(pre_matricula(Aluno, Disciplina, presente)),
-	turma(Turma, Disciplina, _).
+	turma(Disciplina, Turma, _).
 
 %pode_se_matricular_turma(Aluno, Turma, true) :-
 % 	not(pode_se_matricular_turma(Aluno, Turma, _)),
@@ -184,7 +184,7 @@ pode_se_matricular_turma(Aluno, Turma, false) :-
 % Se uma pessoa está matriculada em uma turma, então está matriculada
 % na disciplina correspondente.
 matricula_disc(Aluno, Disciplina) :- 
-	turma(Turma, Disciplina, _),
+	turma(Disciplina, Turma, _),
 	matricula(Aluno, Turma).
 
 
