@@ -20,7 +20,7 @@ public class PrologData {
     
     public PrologData() {
         try {
-//            JPL.init();
+            JPL.init();
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spmp", "root", "");
         } catch (Exception e) {

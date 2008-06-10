@@ -5,11 +5,16 @@
 
 package spmp.business;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
+import jpl.Query;
 import spmp.bean.Aluno;
 import spmp.bean.Disciplina;
 import spmp.bean.Turma;
+import spmp.dao.data.PrologData;
+import spmp.business.prolog.Prolog;
 
 /**
  * Ponto de acesso global as funcionalidades do sistema.
@@ -21,9 +26,15 @@ import spmp.bean.Turma;
 public class SPMPFacade {
     
     private static SPMPFacade instance;
+    private PrologData data = null;
     
     private SPMPFacade() {
-        
+        data = new PrologData();
+        try {
+            data.load();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
     
     public static SPMPFacade getInstance() {
@@ -33,13 +44,37 @@ public class SPMPFacade {
     }
     
     /**
+     * Tira as aspas simples que envolvem a String passada como parametro.
+     * @param o O objeto é convertido para String.
+     * @return
+     */
+    private static String unquote(Object o) {
+        String s = o.toString();
+        if (s.charAt(0) == '\'')
+            return s.substring(1, s.length() - 1);
+        else
+            return s;
+    }
+    
+    /**
      * Retorna as disciplinas por semestre num HashMap (key = semestre, value=lista de disciplinas
      * do referente semestre).
      * @param aluno
      * @return
      */
     public HashMap<Integer, List<Disciplina>> getTodasDisciplinasPorSemestre() {
-        return null;
+        // TODO: dividir por semestre
+        HashMap<Integer, List<Disciplina>> map = new HashMap<Integer, List<Disciplina>>();
+        map.put(0, new ArrayList<Disciplina>());
+        Hashtable[] results = Query.allSolutions(Prolog.comp("disciplina", "Id", "Cod", "Nome"));
+        for (Hashtable item : results) {
+            Disciplina disciplina = new Disciplina();
+            disciplina.setIdDisciplina(unquote(item.get("Id")));
+            disciplina.setCodDisciplina(unquote(item.get("Cod")));
+            disciplina.setNome(unquote(item.get("Nome")));
+            map.get(0).add(disciplina);
+        }
+        return map;
     }
  
     /**
@@ -49,6 +84,7 @@ public class SPMPFacade {
      * @return
      */
     public HashMap<Integer, List<Disciplina>> getSugestaoDisciplinasPorSemestre(Aluno aluno) {
+        
         return null;
     }
     
