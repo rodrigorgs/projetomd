@@ -68,4 +68,8 @@ public class DisciplinaData implements DisciplinaDAO{
         }
     }
 
+    public void insertDisciplina(Disciplina disc) {
+        throw new UnsupportedOperationException("Not supported.");
+    }
+
 }
