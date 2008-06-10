@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import spmp.bean.Aluno;
 import spmp.dao.AlunoDAO;
 import spmp.dao.DAOException;
-
+import javax.persistence.Query;
 /**
  *
  * @author Stefani Pires
@@ -49,6 +49,30 @@ public class AlunoData implements AlunoDAO {
     }
 
     public void delete(Aluno aluno) throws DAOException {
-        throw new UnsupportedOperationException("Not supported yet.");
+        try {
+            em.getTransaction().begin();
+            em.remove(aluno);
+            em.getTransaction().commit();
+            
+        } catch (Exception exception) {
+            //em.getTransaction().rollback();
+            throw new DAOException("Falha ao remover aluno");
+            
+        }
+    }
+
+    public Aluno getAluno(String id, String senha) throws DAOException {
+        try {
+            em.getTransaction().begin();
+            Query query = em.createNamedQuery("Aluno.findByIdAlunoESenha");
+            return (Aluno) query.setParameter("id", id).setParameter("senha", senha).getSingleResult();
+
+        } catch (Exception exception) {
+            throw new DAOException("Aluno não cadastrado.");
+
+        } finally {
+            em.getTransaction().commit();
+        }
+        
     }
 }
