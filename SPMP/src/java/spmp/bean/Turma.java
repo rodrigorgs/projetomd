@@ -24,7 +24,10 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "turma")
-@NamedQueries({@NamedQuery(name = "Turma.findByIdTurma", query = "SELECT t FROM Turma t WHERE t.idTurma = :idTurma"), @NamedQuery(name = "Turma.findByCodTurma", query = "SELECT t FROM Turma t WHERE t.codTurma = :codTurma")})
+@NamedQueries({@NamedQuery(name = "Turma.findByIdTurma", query = "SELECT t FROM Turma t WHERE t.idTurma = :idTurma"), 
+@NamedQuery(name = "Turma.findByCodTurma", query = "SELECT t FROM Turma t WHERE t.codTurma = :codTurma"),
+@NamedQuery(name = "Turma.findByIdDisciplina", query = "SELECT t FROM Turma t WHERE t.idDisciplina = :idDisciplina")})
+
 public class Turma implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

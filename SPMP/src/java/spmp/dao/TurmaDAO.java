@@ -5,10 +5,15 @@
 
 package spmp.dao;
 
+import java.util.List;
+import spmp.bean.Turma;
+
 /**
  *
  * @author Stefani Pires
  */
 public interface TurmaDAO {
+    
+    public List<Turma> getTurmaByDisciplina(String idDisciplina) throws DAOException;
 
 }
