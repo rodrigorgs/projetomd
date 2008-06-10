@@ -3,6 +3,11 @@ package spmp_cli;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Hashtable;
 import jpl.Compound;
 import jpl.JPL;
@@ -21,6 +26,8 @@ import jpl.Util;
  * 
  * O código atual não armazena nenhum fato. Fica tudo na memória e se perde
  * quando o programa encerra.
+ * 
+ * Mas está carregando os fatos a partir do banco de dados.
  * 
  * Veja linhas marcadas com TODO.
  * 
@@ -68,13 +75,16 @@ public class SupimpaCli {
     }
     
     public static void loadData() {
-        JPL.init();
-        boolean success = Query.hasSolution(comp("consult", "'../prolog/main.pl'"));
+        try {
+            Data data = new Data();
+            data.load();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        boolean success = Query.hasSolution(comp("consult", "'../SPMP/src/java/spmp/business/prolog/regras.pl'"));
         if (!success)
             throw new RuntimeException("Could not load prolog file");
-
-        // TODO: carregar os fatos a partir do banco de dados
-        // (apenas as regras serao carregadas de um arquivo pl)
     }
     
     public static String[] getVar(String var, Hashtable[] solutions) {
@@ -103,6 +113,8 @@ public class SupimpaCli {
     
         System.out.println("Sistema de Planejamento de Matricula com Prolog");
         System.out.println("-----------------------------------------------");
+        
+        print(getVar("D", Query.allSolutions(comp("disciplina", "_", "_", "D"))));
         
         while (true) {
             boolean stop = false;
@@ -197,6 +209,78 @@ public class SupimpaCli {
         }
     }
 
+}
+
+class Data {
+    Connection conn;
+    
+    public Data() {
+        try {
+            JPL.init();
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spmp", "root", "");
+        } catch (Exception e) {
+            System.err.println("Could not connect to database");
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
+    
+    public String[] getTables() {
+        return new String[] { "aluno", "disciplina", "historico", "horario", 
+        "matricula", "pre_matricula", "prerequisito", "semestre_sugerido",
+        "turma"};
+    }
+    
+    public void load() throws SQLException {
+        Statement stmt = conn.createStatement();
+        for (String table : getTables()) {
+            System.out.println("Table " + table);
+            ResultSet rs = stmt.executeQuery("SELECT * FROM " + table);
+            int n = rs.getMetaData().getColumnCount();
+            System.out.println("n = " + n);
+            Term[] terms = new Term[n];
+//            rs.first();
+            while (rs.next()) {
+                for (int i = 1; i <= n; i++) {
+                    terms[i-1] = Util.textToTerm(rs.getString(i));
+//                    System.out.println("---" + rs.getString(i));
+                }
+                Compound fact = new Compound(table, terms);
+                assertFactOnProlog(fact);
+            }
+
+        }
+        
+//        System.exit(0);
+    }
+    
+    public static void assertFactOnProlog(Compound fact) {
+        Query q = new Query("assert", fact);
+        if (!q.hasSolution())
+            throw new RuntimeException("ERROR: could not assert");
+        // TODO: inserir no banco de dados
+    }
+    
+    public void assertFact(Compound fact) throws SQLException {
+        Query q = new Query("assert", fact);
+        if (!q.hasSolution())
+            throw new RuntimeException("ERROR: could not assert");
+        
+        String table = fact.name();
+        int n = fact.arity();
+        
+        Statement stmt = conn.createStatement();
+//        stmt.executeQuery("INSERT INTO ")
+        // TODO: inserir no banco de dados
+    }
+
+    public void retractFact(Compound fact) {
+        Query q = new Query("retract", fact);
+        if (!q.hasSolution())
+            throw new RuntimeException("ERROR: could not retract");
+        //TODO: remover do banco de dados. Deve tratar termos do tipo Variable.
+    }
 }
 
 class Prompt {
