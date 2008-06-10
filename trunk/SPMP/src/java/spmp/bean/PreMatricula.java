@@ -21,7 +21,10 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "pre_matricula")
-@NamedQueries({@NamedQuery(name = "PreMatricula.findByIdAluno", query = "SELECT p FROM PreMatricula p WHERE p.preMatriculaPK.idAluno = :idAluno"), @NamedQuery(name = "PreMatricula.findByIdDisciplina", query = "SELECT p FROM PreMatricula p WHERE p.preMatriculaPK.idDisciplina = :idDisciplina"), @NamedQuery(name = "PreMatricula.findByTempo", query = "SELECT p FROM PreMatricula p WHERE p.tempo = :tempo")})
+@NamedQueries({@NamedQuery(name = "PreMatricula.findByIdAluno", query = "SELECT p FROM PreMatricula p WHERE p.preMatriculaPK.idAluno = :idAluno"), 
+@NamedQuery(name = "PreMatricula.findByIdDisciplina", query = "SELECT p FROM PreMatricula p WHERE p.preMatriculaPK.idDisciplina = :idDisciplina"), 
+@NamedQuery(name = "PreMatricula.findByTempo", query = "SELECT p FROM PreMatricula p WHERE p.tempo = :tempo")})
+
 public class PreMatricula implements Serializable {
     private static final long serialVersionUID = 1L;
     @EmbeddedId
