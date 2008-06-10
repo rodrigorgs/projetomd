@@ -41,6 +41,16 @@ public class SPMPFacade {
     public HashMap<Integer, List<Disciplina>> getTodasDisciplinasPorSemestre() {
         return null;
     }
+ 
+    /**
+     * Retorna as disciplinas por semestre num HashMap (key = semestre, value=lista de disciplinas
+     * do referente semestre), excluindo as disciplinas que o aluno não pode escolher.
+     * @param aluno
+     * @return
+     */
+    public HashMap<Integer, List<Disciplina>> getSugestaoDisciplinasPorSemestre(Aluno aluno) {
+        return null;
+    }
     
     /**
      * Retorna o conflito entre um conjunto de disciplinas para que o usuário possa
