@@ -41,13 +41,14 @@ import jpl.Util;
  * @author rodrigo
  */
 public class SupimpaCli {
+    Data data = null;
 
-    public static void assertFact(Compound fact) {
-        Query q = new Query("assert", fact);
-        if (!q.hasSolution())
-            throw new RuntimeException("ERROR: could not assert");
-        // TODO: inserir no banco de dados
-    }
+//    public static void assertFact(Compound fact) {
+//        Query q = new Query("assert", fact);
+//        if (!q.hasSolution())
+//            throw new RuntimeException("ERROR: could not assert");
+//        // TODO: inserir no banco de dados
+//    }
 
     public static void retractFact(Compound fact) {
         Query q = new Query("retract", fact);
@@ -74,9 +75,9 @@ public class SupimpaCli {
         return new Compound(pred, terms);
     }
     
-    public static void loadData() {
+    public void loadData() {
         try {
-            Data data = new Data();
+            data = new Data();
             data.load();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -107,9 +108,11 @@ public class SupimpaCli {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Throwable {
-        loadData();
+        SupimpaCli cli = new SupimpaCli();
+        cli.loadData();
         
         String aluno = Prompt.prompt("Digite seu nome de usuario: ");
+        cli.data.assertFact(comp("aluno", aluno, "''", "''", "''"));
     
         System.out.println("Sistema de Planejamento de Matricula com Prolog");
         System.out.println("-----------------------------------------------");
@@ -137,7 +140,7 @@ public class SupimpaCli {
 
                     if (cmd.equals("a")) {
                         if (!Query.hasSolution(comp("pode_se_matricular_disc", aluno, disc, "false")))
-                            assertFact(fact);
+                            cli.data.assertFact(fact);
                         else 
                             System.out.println("ERRO");
                     }
@@ -178,7 +181,7 @@ public class SupimpaCli {
                         break;
                     }
                     else {
-                        assertFact(comp("matricula", aluno, turma));
+                        cli.data.assertFact(comp("matricula", aluno, turma));
                     }
                 }
 
@@ -194,7 +197,7 @@ public class SupimpaCli {
                 System.out.println();
                 String line = Prompt.prompt("Você foi aprovado(a) em " + disc + " (s/n)? ");
                 boolean resp = line.equalsIgnoreCase("s");
-                assertFact(comp("foi_aprovado", aluno, disc, "" + resp));
+                cli.data.assertFact(comp("foi_aprovado", aluno, disc, "" + resp));
             }
             
             // remove informacao de matricula
@@ -203,7 +206,7 @@ public class SupimpaCli {
             String[] discspre = getVar("D", Query.allSolutions(comp("pre_matricula", aluno, "D", "presente")));
             for (String disc : discspre) {
                 retractFact(comp("pre_matricula", aluno, disc, "presente"));
-                assertFact(comp("pre_matricula", aluno, disc, "passado"));
+                cli.data.assertFact(comp("pre_matricula", aluno, disc, "passado"));
             }
             //TODO: retracts
         }
@@ -259,9 +262,28 @@ class Data {
         Query q = new Query("assert", fact);
         if (!q.hasSolution())
             throw new RuntimeException("ERROR: could not assert");
-        // TODO: inserir no banco de dados
     }
     
+    public static void retractFactOnProlog(Compound fact) {
+        Query q = new Query("retract", fact);
+        if (!q.hasSolution())
+            throw new RuntimeException("ERROR: could not retract");
+    }
+    
+    public static String join(String[] strings, String delimiter) {
+        StringBuffer buffer = new StringBuffer();
+        boolean first = true;
+        for (String s : strings)  {
+            if (first)
+                first = false;
+            else
+                buffer.append(delimiter);
+            buffer.append(s);
+        }
+        return buffer.toString();
+    }
+
+    // TODO: fazer verificação pra evitar fatos duplicados.
     public void assertFact(Compound fact) throws SQLException {
         Query q = new Query("assert", fact);
         if (!q.hasSolution())
@@ -269,10 +291,19 @@ class Data {
         
         String table = fact.name();
         int n = fact.arity();
+        String[] values = new String[n];
+        for (int i = 1; i <= n; i++) {
+            Term term = fact.arg(i);
+            if (term instanceof jpl.Integer || term instanceof jpl.Float)
+                values[i-1] = term.toString();
+            else 
+                values[i-1] = "'" + term.toString().replaceAll("'", "\\\\'") + "'";
+        }
         
         Statement stmt = conn.createStatement();
-//        stmt.executeQuery("INSERT INTO ")
-        // TODO: inserir no banco de dados
+        String query = String.format("INSERT INTO %s VALUES (%s)", table, join(values, ","));
+        System.out.println("---" + query);
+        stmt.executeUpdate(query);
     }
 
     public void retractFact(Compound fact) {
