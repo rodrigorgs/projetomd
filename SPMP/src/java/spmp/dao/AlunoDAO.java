@@ -16,4 +16,7 @@ public interface AlunoDAO {
     public void insert(Aluno aluno) throws DAOException;
     public void update(Aluno aluno) throws DAOException;
     public void delete(Aluno aluno) throws DAOException;
+    
+    public Aluno getAluno(String id, String senha) throws DAOException;
+    
 }
