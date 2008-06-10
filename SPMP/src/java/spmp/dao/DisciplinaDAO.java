@@ -14,7 +14,7 @@ import spmp.bean.SemestreSugerido;
  * @author Stefani Pires
  */
 public interface DisciplinaDAO {
-
+    public void insertDisciplina(Disciplina disc);
     public List<Disciplina> getDisciplinas() throws DAOException;
     public Disciplina getDiciplina(String id) throws DAOException;
     

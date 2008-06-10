@@ -5,6 +5,7 @@
 
 package spmp.dao;
 
+import spmp.business.prolog.DisciplinaFact;
 import spmp.dao.data.AlunoData;
 import spmp.dao.data.DisciplinaData;
 import spmp.dao.data.MatriculaData;
@@ -14,35 +15,35 @@ import spmp.dao.data.TurmaData;
  *
  * @author Stefani Pires
  */
-public class ManagerDAO implements DAOFactory {
+public class ManagerPrologDAO implements DAOFactory {
 
-    private static ManagerDAO instance;
+    private static ManagerPrologDAO instance;
 
 
-    private ManagerDAO() {}
+    private ManagerPrologDAO() {}
 
     
-    public static ManagerDAO getInstance() {
+    public static ManagerPrologDAO getInstance() {
         if (instance == null) {
-            instance = new ManagerDAO();
+            instance = new ManagerPrologDAO();
         }
         return instance;
     }
 
     public AlunoDAO createAlunoDAO() {
-        return new AlunoData();
+        throw new UnsupportedOperationException("TODO: implement");
     }
     
     public DisciplinaDAO createDiciplinaDAO() {
-        return new DisciplinaData();
+        return new DisciplinaFact();
     }
     
     public TurmaDAO createTurmaDAO() {
-        return new TurmaData();
+        throw new UnsupportedOperationException("TODO: implement");
     }
 
     public MatriculaDAO createMatriculaDAO() {
-        return new MatriculaData();
+        throw new UnsupportedOperationException("TODO: implement");
     }
 
 }
