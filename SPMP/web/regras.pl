@@ -30,8 +30,8 @@ disciplinas_optativas_para_aluno(Aluno, Id, Cod, Nome) :-
 	disciplina(Id, Cod, Nome),
 	not(pode_se_matricular_disc(Aluno, Id, false)).
 
-get_prerequisitos(Pre, Id, Cod, Nome) :-
-    prerequisito(Pre, Id),
+get_prerequisitos(Pos, Id, Cod, Nome) :-
+    prerequisito(Id, Pos),
     disciplina(Id, Cod, Nome).
 
 % ATENCAO
