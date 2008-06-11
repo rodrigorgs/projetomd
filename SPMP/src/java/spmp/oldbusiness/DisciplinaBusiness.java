@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package spmp.business;
+package spmp.oldbusiness;
 
 import java.util.List;
 import spmp.dao.DAOException;

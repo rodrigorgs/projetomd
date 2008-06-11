@@ -3,12 +3,13 @@
  * and open the template in the editor.
  */
 
-package spmp.business.prolog;
+package spmp.oldbusiness.prolog;
 
 import java.util.List;
 import jpl.Compound;
 import spmp.bean.Disciplina;
 import spmp.bean.SemestreSugerido;
+import spmp.business.PrologUtil;
 import spmp.dao.DAOException;
 import spmp.dao.DisciplinaDAO;
 
@@ -19,11 +20,11 @@ import spmp.dao.DisciplinaDAO;
 public class DisciplinaFact implements DisciplinaDAO {
 
     public void insertDisciplina(Disciplina disc) {
-        Compound fact = Prolog.comp("disciplina", 
+        Compound fact = PrologUtil.comp("disciplina", 
                 disc.getIdDisciplina(),
                 disc.getCodDisciplina(),
                 disc.getNome());
-        Prolog.assertFactOnProlog(fact);
+        PrologUtil.assertFactOnProlog(fact);
     }
     
     public List<Disciplina> getDisciplinas() throws DAOException {

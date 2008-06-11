@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package spmp.business.prolog;
+package spmp.business;
 
 import java.util.Hashtable;
 import jpl.Compound;
@@ -15,7 +15,7 @@ import jpl.Util;
  *
  * @author roden
  */
-public class Prolog {
+public class PrologUtil {
     /**
      * Compoe o predicado fornecido com os termos fornecidos e retorna um
      * predicado do prolog.

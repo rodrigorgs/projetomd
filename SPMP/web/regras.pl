@@ -8,17 +8,34 @@
 	matricula/2, 
 	foi_aprovado/3.
 
-% As regras não consideram algumas situações:
-% - quebra de pré-requisito;
+% As regras nï¿½o consideram algumas situaï¿½ï¿½es:
+% - quebra de prï¿½-requisito;
 % - aproveitamento de disciplinas (aluno transferido de outra universidade).
 
-%domain_predicate(X) :-
-%	setof(Pred2, predicate_property(Pred2, _), All), !, 
-%	setof(Pred1, predicate_property(Pred1, built_in), Builtins), 
-%	subtract(All, Builtins, X).
+%%%%%%%%%%%%%%%%%%%% Consultas auxiliares %%%%%%%%%%%%%%%%%%%%%%%%%%
+get_todas_disciplinas_por_semestre(Semestre, Id, Cod, Nome) :-
+	disciplina(Id, Cod, Nome),
+	semestre_sugerido(Id, Semestre).
 
-% ATENÇÃO
-% Predicados marcados com PREDICADO COMPUTADO não são armazenados
+get_todas_disciplinas_por_semestre(0, Id, Cod, Nome) :-
+	disciplina(Id, Cod, Nome),
+	not(semestre_sugerido(Id, _)).
+
+disciplinas_por_semestre_para_aluno(Aluno, Semestre, Id, Cod, Nome) :-
+	disciplina(Id, Cod, Nome),
+	not(pode_se_matricular_disc(Aluno, Id, false)),
+	semestre_sugerido(Id, Semestre).
+
+disciplinas_optativas_para_aluno(Aluno, Id, Cod, Nome) :-
+	disciplina(Id, Cod, Nome),
+	not(pode_se_matricular_disc(Aluno, Id, false)).
+
+get_prerequisitos(Pre, Id, Cod, Nome) :-
+    prerequisito(Pre, Id),
+    disciplina(Id, Cod, Nome).
+
+% ATENCAO
+% Predicados marcados com PREDICADO COMPUTADO nï¿½o sï¿½o armazenados
 % no banco de dados.
 
 %%%%%%%%%%%%%%% Predicados sobre disciplinas e turmas %%%%%%%%%%%%%%
@@ -32,17 +49,17 @@
 % Turma
 %   - turma(disc, turma, codigo)
 %   - horario(turma, dia, inicio, fim)
-%     (o intervalo da aula é fechado em inicio e aberto em fim.)
+%     (o intervalo da aula ï¿½ fechado em inicio e aberto em fim.)
 %
 %%%
 
 eh_prerequisito_trans(A, C) :- prerequisito(A, C).
 eh_prerequisito_trans(A, C) :- prerequisito(A, B), eh_prerequisito_trans(B, C).
 
-% Define se há interseção entre dois intervalos de tempo [A1, A2) e [B1, B2).
+% Define se hï¿½ interseï¿½ï¿½o entre dois intervalos de tempo [A1, A2) e [B1, B2).
 choque(A1, A2, B1, B2) :- A2 > B1, A1 < B2.
 
-% Indica se há choque de horário entre duas turmas.
+% Indica se hï¿½ choque de horï¿½rio entre duas turmas.
 choque_turma(T1, T2) :- 
 	horario(T1, Dia, A1, A2),
 	horario(T2, Dia, B1, B2),
@@ -52,68 +69,68 @@ choque_turma(T1, T2) :-
 %
 % pre_matricula(Aluno, Disciplina, Tempo)
 %   Significa que o aluno tem interesse em se matricular na disciplina no
-%   próximo período. Na prática, representa que o aluno selecionou a
-%   disciplina na tela de pré-matrícula do sistema.
+%   prï¿½ximo perï¿½odo. Na prï¿½tica, representa que o aluno selecionou a
+%   disciplina na tela de prï¿½-matrï¿½cula do sistema.
 %   Tempo pertence a {presente, passado}
 %
 % pode_se_matricular_disc(Aluno, Disciplina, VV)  PREDICADO COMPUTADO
-%   Levando em consideração apenas as restrições de pré-requisito, o aluno
-%   pode se matricular na disciplina. Não verificamos aqui se há choque
-%   de horário.
+%   Levando em consideraï¿½ï¿½o apenas as restriï¿½ï¿½es de prï¿½-requisito, o aluno
+%   pode se matricular na disciplina. Nï¿½o verificamos aqui se hï¿½ choque
+%   de horï¿½rio.
 %   VV = valor verdade, pertencente a {true, false}.
 %
 %   exemplo de consulta: pode_se_matricular_disc(rodrigo, mat055, X).
 %   retorna X = true ou X = false se o sistema souber responder.
-%   retorna fail se o sistema não souber responder.
+%   retorna fail se o sistema nï¿½o souber responder.
 %
 % pode_se_matricular_turma(Aluno, Turma, VV)  PREDICADO COMPUTADO
-%   Levando em consideração choques de horário e pré-requisitos entre 
+%   Levando em consideraï¿½ï¿½o choques de horï¿½rio e prï¿½-requisitos entre 
 %   disciplinas, indica se o aluno pode se matricular na turma.
 %   VV = valor verdade (veja pode_se_matricular_disc).
 %
 % matricula(Aluno, Turma)
-%   Significa que o aluno está matriculado na turma. O conceito de matrícula
-%   não é definitivo, isto é, o aluno pode mudar sua matrícula a qualquer
-%   momento quando estiver no período de matrícula. Na prática, representa
-%   que o aluno pre_matricula a turma na tela de matrícula do sistema.
+%   Significa que o aluno estï¿½ matriculado na turma. O conceito de matrï¿½cula
+%   nï¿½o ï¿½ definitivo, isto ï¿½, o aluno pode mudar sua matrï¿½cula a qualquer
+%   momento quando estiver no perï¿½odo de matrï¿½cula. Na prï¿½tica, representa
+%   que o aluno pre_matricula a turma na tela de matrï¿½cula do sistema.
 %
 % foi_aprovado(Aluno, Disciplina, VV) (alguns sao computados)
 %   Significa que o aluno foi aprovado na disciplina.
 %   VV = valor verdade (veja pode_se_matricular_disc).
 %
-%   predicados da forma foi_aprovado(_, _, false) não são armazenados no
+%   predicados da forma foi_aprovado(_, _, false) nï¿½o sï¿½o armazenados no
 %   banco de dados, pois isso pode mudar.
 %
 %%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%% Pré-matrícula %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Prï¿½-matrï¿½cula %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Nesta etapa o aluno deve selecionar as disciplinas em que tem a intenção
+% Nesta etapa o aluno deve selecionar as disciplinas em que tem a intenï¿½ï¿½o
 % de se matricular.
 %
-% A seleção de disciplinas para pré-matrícula deve respeitar os
-% pré-requisitos entre as disciplinas.
+% A seleï¿½ï¿½o de disciplinas para prï¿½-matrï¿½cula deve respeitar os
+% prï¿½-requisitos entre as disciplinas.
 %
-% Assumimos que o aluno só seleciona disciplinas em que pode ser matriculado.
+% Assumimos que o aluno sï¿½ seleciona disciplinas em que pode ser matriculado.
 %
-% O sistema vai construindo conhecimento sobre o histórico do aluno de
+% O sistema vai construindo conhecimento sobre o histï¿½rico do aluno de
 % acordo com suas escolhas.
 %
 %%%
 
-% Se o aluno se pre-matriculou na disciplina, então ainda não foi aprovado nela.
+% Se o aluno se pre-matriculou na disciplina, entï¿½o ainda nï¿½o foi aprovado nela.
 foi_aprovado(Aluno, Disciplina, false) :-
 	pre_matricula(Aluno, Disciplina, presente).
 
-% não foi aprovado se propaga para frente
+% nï¿½o foi aprovado se propaga para frente
 foi_aprovado(Aluno, Pos, false) :-
 	%eh_prerequisito_trans(Disciplina, Pos),
 	prerequisito(Disciplina, Pos),
 	foi_aprovado(Aluno, Disciplina, false).
 
-% Se o aluno se pre-matriculou na disciplina, então foi aprovado nos pre-requisitos.
+% Se o aluno se pre-matriculou na disciplina, entï¿½o foi aprovado nos pre-requisitos.
 foi_aprovado(Aluno, Pre, true) :-
 	prerequisito(Pre, Disciplina),
 	pre_matricula(Aluno, Disciplina, presente).
@@ -124,18 +141,18 @@ foi_aprovado(Aluno, Pre, true) :-
 	prerequisito(Pre, Disciplina),
 	foi_aprovado(Aluno, Disciplina, true).
 
-% Se já foi aprovado, não pode se matricular
+% Se jï¿½ foi aprovado, nï¿½o pode se matricular
 pode_se_matricular_disc(Aluno, Disciplina, false) :-
 	foi_aprovado(Aluno, Disciplina, true).
 
-% Se pode se matricular em uma disciplina, não pode se
-% matricular em seus "pós-requisitos".
+% Se pode se matricular em uma disciplina, nï¿½o pode se
+% matricular em seus "pï¿½s-requisitos".
 pode_se_matricular_disc(Aluno, Pos, false) :-
 	pre_matricula(Aluno, Disc, presente),
 	eh_prerequisito_trans(Disc, Pos).
 
-% Se ainda não foi aprovado na disciplina e já cumpriu os
-% pré-requisitos, pode se matricular nela.
+% Se ainda nï¿½o foi aprovado na disciplina e jï¿½ cumpriu os
+% prï¿½-requisitos, pode se matricular nela.
 pode_se_matricular_disc(Aluno, Disciplina, true) :-
 	foi_aprovado(Aluno, Disciplina, false), % XXX substituir por false(pode_se_matricular)?	
 	forall(
@@ -143,35 +160,35 @@ pode_se_matricular_disc(Aluno, Disciplina, true) :-
 		foi_aprovado(Aluno, Pre, true)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%% Matrícula %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Matrï¿½cula %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Nesta etapa o sistema exibe as turmas das disciplinas selecionadas pelo
-% aluno na pré-matrícula, e o aluno pode se matricular em algumas delas.
+% aluno na prï¿½-matrï¿½cula, e o aluno pode se matricular em algumas delas.
 %
-% O sistema identifica choques de horário.
+% O sistema identifica choques de horï¿½rio.
 %
 %%%
 
 % TODO: substituir pode_se_matricular_turma/3 por nao_pode_se_matricular_turma/2 ?
 
 % predicado para facilitar consulta Java
-turmas_para_aluno(Aluno, Turma) :-
-	turma(Disciplina, Turma, _),
+get_turmas_para_aluno(Aluno, Turma, Cod) :-
+	turma(Disciplina, Turma, Cod),
 	pre_matricula(Aluno, Disciplina, presente).
 
-% Ninguém pode se matricular em duas turmas com choque de horário.
+% Ninguï¿½m pode se matricular em duas turmas com choque de horï¿½rio.
 pode_se_matricular_turma(Aluno, T2, false) :-
 	matricula(Aluno, T1), 
 	choque_turma(T1, T2).
 
-% Ninguém pode se matricular em duas turmas da mesma disciplina.
+% Ninguï¿½m pode se matricular em duas turmas da mesma disciplina.
 pode_se_matricular_turma(Aluno, T2, false) :-
 	matricula(Aluno, T1),
 	turma(Disciplina, T1, _),
 	turma(Disciplina, T2, _).
 
-% Se não está escolheu a disciplina na pré-matrícula, não pode se matricular
+% Se nï¿½o estï¿½ escolheu a disciplina na prï¿½-matrï¿½cula, nï¿½o pode se matricular
 % nas suas turmas.
 pode_se_matricular_turma(Aluno, Turma, false) :-
 	not(pre_matricula(Aluno, Disciplina, presente)),
@@ -183,7 +200,7 @@ pode_se_matricular_turma(Aluno, Turma, false) :-
 % 	pre_matricula(Aluno, Disciplina, _).
 
 % R1
-% Se uma pessoa está matriculada em uma turma, então está matriculada
+% Se uma pessoa estï¿½ matriculada em uma turma, entï¿½o estï¿½ matriculada
 % na disciplina correspondente.
 matricula_disc(Aluno, Disciplina) :- 
 	turma(Disciplina, Turma, _),
@@ -197,7 +214,7 @@ matricula_disc(Aluno, Disciplina) :-
 % Nesta etapa o aluno informa se foi aprovado nas disciplinas, e com
 % isso aumenta o conhecimento do sistema sobre ele.
 %
-% O sistema mostra o histórico do aluno, segundo seu conhecimento incompleto.
+% O sistema mostra o histï¿½rico do aluno, segundo seu conhecimento incompleto.
 %%%
 
 
