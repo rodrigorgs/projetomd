@@ -44,7 +44,7 @@ public class Disciplina implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "disciplina")
     private Collection<Historico> historicoCollection;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "disciplina")
-    private SemestreSugerido semestreSugerido;
+    private int semestreSugerido;
 
     public Disciplina() {
     }
@@ -107,11 +107,11 @@ public class Disciplina implements Serializable {
         this.historicoCollection = historicoCollection;
     }
 
-    public SemestreSugerido getSemestreSugerido() {
+    public int getSemestreSugerido() {
         return semestreSugerido;
     }
 
-    public void setSemestreSugerido(SemestreSugerido semestreSugerido) {
+    public void setSemestreSugerido(int semestreSugerido) {
         this.semestreSugerido = semestreSugerido;
     }
 

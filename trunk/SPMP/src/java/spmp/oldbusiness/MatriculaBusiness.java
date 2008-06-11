@@ -3,22 +3,20 @@
  * and open the template in the editor.
  */
 
-package spmp.business;
+package spmp.oldbusiness;
 
 /**
  *
  * @author Stefani Pires
  */
-public class TurmaBusiness {
+public class MatriculaBusiness {
 
-    private static TurmaBusiness instance;
+    private static MatriculaBusiness instance;
     
-    public static TurmaBusiness getInstance() {
+    public static MatriculaBusiness getInstance() {
         if (instance == null) {
-            instance = new TurmaBusiness();
+            instance = new MatriculaBusiness();
         }
         return instance;
     }
-    
-    
 }

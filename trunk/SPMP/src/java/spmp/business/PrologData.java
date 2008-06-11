@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package spmp.dao.data;
+package spmp.business;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,16 +18,19 @@ import jpl.Util;
 public class PrologData {
     java.sql.Connection conn;
     
-    public PrologData() {
+    public PrologData(String fileRegras) {
         try {
             JPL.init();
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spmp", "root", "");
         } catch (Exception e) {
-            System.err.println("Could not connect to database");
-            e.printStackTrace();
-            System.exit(1);
+            throw new RuntimeException("Could not connect to database");
         }
+        
+        fileRegras = fileRegras.replaceAll("\\\\", "\\\\\\\\");
+        boolean success = Query.hasSolution(PrologUtil.comp("consult", "'" + fileRegras + "'"));
+        if (!success)
+            throw new RuntimeException("Could not load prolog file");
     }
     
     public String[] getTables() {
