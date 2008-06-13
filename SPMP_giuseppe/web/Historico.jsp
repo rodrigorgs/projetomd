@@ -39,7 +39,7 @@
                 <tr class="result">
                     <td width="60"><b>(${disciplinaDe.codDisciplina})</b></td>
                     <td width="300">${disciplinaDe.nome}</td>
-                    <td><input type="checkbox" name="selecionadasDesconhecido" value="${disciplinaDe.idDisciplina}" 
+                    <td><input type="checkbox" name="selecionadasAprovadas" value="${disciplinaDe.idDisciplina}" 
                                 <c:if test="${disciplinasSelecionadas[disciplinaDe.idDisciplina]}">
                                    disabled="disabled"
                                 </c:if> /> fui aprovado </td>

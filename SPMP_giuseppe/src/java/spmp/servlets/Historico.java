@@ -45,7 +45,7 @@ public class Historico extends HttpServlet {
         if (selecionadasAprovadas != null && selecionadasAprovadas.length > 0) {
             try {
                 facade.setResultado(aluno, selecionadasAprovadas);
-                msg += "Seleção das aprovadas efetuado com sucesso.";
+                msg += "Seleção efetuada com sucesso.";
             } catch (BusinessException ex) {
                 msg = ex.getMessage();
             }
