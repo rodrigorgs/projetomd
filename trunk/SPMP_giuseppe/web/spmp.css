@@ -104,14 +104,25 @@ a:hover {
   text-decoration:none;  
 }
 
-.titResult {
+.titResult {  
   text-transform:uppercase;      
   font-size: 14px;
   background-color: #bdbfc4;
   color: #ffffff;
   font-weight: bold;
   letter-spacing: 3px;
+  
+  
 }
+
+.titResult td {
+    padding-top:5px;
+    border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #333333;
+}
+
+
 
 .result {
   text-transform:uppercase;
