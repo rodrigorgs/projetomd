@@ -1,4 +1,4 @@
-CREATE DATABASE `spmp` /*!40100 DEFAULT CHARACTER SET latin1 */;
+/*CREATE DATABASE `spmp` !40100 DEFAULT CHARACTER SET latin1;*/
 
 DROP TABLE IF EXISTS `spmp`.`aluno`;
 CREATE TABLE  `spmp`.`aluno` (
@@ -49,7 +49,7 @@ CREATE TABLE  `spmp`.`pre_matricula` (
   `idAluno` varchar(45) NOT NULL,
   `idDisciplina` varchar(12) NOT NULL,
   `tempo` varchar(8) NOT NULL,
-  PRIMARY KEY  (`idAluno`,`idDisciplina`),
+  PRIMARY KEY  (`idAluno`,`idDisciplina`, `tempo`),
   KEY `FK_pre_matricula_2` (`idDisciplina`),
   CONSTRAINT `FK_pre_matricula_1` FOREIGN KEY (`idAluno`) REFERENCES `aluno` (`idAluno`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_pre_matricula_2` FOREIGN KEY (`idDisciplina`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE CASCADE ON UPDATE CASCADE

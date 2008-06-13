@@ -1,4 +1,4 @@
-﻿
+
 INSERT INTO disciplina (idDisciplina, codDisciplina, nome) VALUES ('adm170', '\'ADM170\'', '\'ADMINISTRACAO CONTABIL I\'');
 INSERT INTO turma (idDisciplina, idTurma, codTurma) VALUES ('adm170', 'adm170010000', '\'010000\'');
 INSERT INTO horario (idTurma, diaSemana, horaInicio, horaFim) VALUES ('adm170010000', 'seg', 18, 20);
