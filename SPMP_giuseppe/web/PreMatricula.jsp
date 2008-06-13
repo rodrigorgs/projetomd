@@ -66,7 +66,7 @@
                     </c:forEach>
             </c:forEach>   
             <tr>
-                <td align="right" colspan="4"><input type="submit" value="efetuar pré-matrícula" /><input type="reset" value="limpar" /></td>
+                <td align="right" colspan="4"><input type="submit" value="efetuar pré-matrícula" /></td>
             </tr>
         </table>    
     </form>
