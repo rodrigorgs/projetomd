@@ -72,6 +72,7 @@ public class PreMatricula extends HttpServlet {
             }           
         }
         
+        disciplinasDisponiveis = fachada.getDisciplinasPorSemestre(aluno);
         request.setAttribute("invalidas", invalidas);      
         request.setAttribute("disciplinasSelecao", disciplinasSelecao);
         request.setAttribute("disciplinasPreRequisitos", getMapaPreRequisitos(disciplinasDisponiveis));
