@@ -29,11 +29,11 @@
                         <td colspan="4">${entry.key}º Semestre</td>
                     </tr>
                     <c:forEach var="disciplina" items="${disciplinasDisponiveis[entry.key]}">
-                        <tr class="result">
+                        <tr class="result" <c:if test="${invalidas[disciplina]}">style="background-color:orange"</c:if>>
                             <td width="10"><input type="checkbox" name="disciplinasSelecionadas" value="${disciplina.idDisciplina}" 
                                        <c:if test="${disciplinasSelecao[disciplina.idDisciplina]}"> checked="checked" </c:if> />
                                        </td>                   
-                            <td width="100"><b><c:if test="${invalidas[disciplina]}">***</c:if>(${disciplina.codDisciplina})</b>
+                            <td width="100"><b>(${disciplina.codDisciplina})</b>
                             <td width="300">${disciplina.nome}</td>
                             <td style="font-size:12px">
                                 <c:forEach var="disciplinaRequisitos" items="${disciplinasPreRequisitos[disciplina.idDisciplina]}">
@@ -50,7 +50,7 @@
                         <td colspan="4">Optativas </td>
                     </tr>
                     <c:forEach var="disciplina" items="${disciplinasDisponiveis[entry.key]}">
-                        <tr class="result">
+                        <tr class="result" <c:if test="${invalidas[disciplina]}">style="background-color:orange"</c:if>>
                             <td><input type="checkbox" name="disciplinasSelecionadas" value="${disciplina.idDisciplina}" 
                                        <c:if test="${disciplinasSelecao[disciplina.idDisciplina]}"> checked="checked" </c:if> />
                                        </td>                   
