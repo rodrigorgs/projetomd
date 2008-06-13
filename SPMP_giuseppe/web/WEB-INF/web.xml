@@ -24,6 +24,10 @@
         <servlet-name>Matricula</servlet-name>
         <servlet-class>spmp.servlets.Matricula</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Historico</servlet-name>
+        <servlet-class>spmp.servlets.Historico</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login.do</url-pattern>
@@ -43,6 +47,10 @@
     <servlet-mapping>
         <servlet-name>Matricula</servlet-name>
         <url-pattern>/Matricula.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Historico</servlet-name>
+        <url-pattern>/Historico.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
