@@ -140,7 +140,9 @@ public class PrologData {
     private String termToSqlLiteral(Term term) {
         if (term instanceof jpl.Integer || term instanceof jpl.Float)
             return term.toString();
-        else 
+        else if (term.toString().matches("(true|false)"))
+            return term.toString();
+        else
             return "'" + term.toString().replaceAll("'", "\\\\'") + "'";
     }
     
