@@ -42,7 +42,6 @@ public class PreMatricula extends HttpServlet {
 
         boolean success = false;
         if (disciplinasSelecionadas != null) {
-            List<Disciplina> disciplinasSelecionadasList = new LinkedList<Disciplina>();
             for (String disciplina : disciplinasSelecionadas) {
                 disciplinasSelecao.put(disciplina, true);
             }            
