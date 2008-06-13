@@ -17,6 +17,7 @@ import spmp.bean.Aluno;
 import spmp.bean.Disciplina;
 import spmp.bean.Turma;
 import spmp.business.BusinessException;
+import spmp.business.MatriculaException;
 import spmp.business.prolog.SPMPFacade;
 
 /**
@@ -38,6 +39,8 @@ public class Matricula extends HttpServlet {
         HashMap<Disciplina, List<Turma>> turmasDisponiveis = fachada.getTurmasParaAluno(aluno);
         HashMap<String, Boolean> turmasSelecao = new HashMap<String, Boolean>();
         List<String> turmasSelecionadas = new LinkedList<String>();
+        HashMap<Turma, Boolean> invalidas = new HashMap<Turma, Boolean>();
+        
         for (Disciplina disciplina : turmasDisponiveis.keySet()) {
 
             String idTurma = request.getParameter(disciplina.getIdDisciplina());
@@ -57,6 +60,12 @@ public class Matricula extends HttpServlet {
                 fachada.efetuarMatricula(aluno, turmasSelecionadas.toArray(new String[0]));
                 msg = "Matricula efetuada com sucesso.";
                 success = true;
+            } catch (MatriculaException e) {
+                success = false;
+                msg = e.getMessage();
+                for (Turma t : e.getTurmasInvalidas())
+                    invalidas.put(t, true);
+                
             } catch (BusinessException ex) {
                 success = false;
                 msg = ex.getMessage();
@@ -64,6 +73,7 @@ public class Matricula extends HttpServlet {
             request.setAttribute("msg", msg);
         }
 
+        request.setAttribute("invalidas", invalidas);
         request.setAttribute("turmasSelecao", turmasSelecao);
         request.setAttribute("turmasDisponiveis", turmasDisponiveis);
         request.setAttribute("step", "Matricula.jsp");
