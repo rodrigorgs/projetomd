@@ -170,6 +170,7 @@ pode_se_matricular_disc(Aluno, Disciplina, true) :-
     pre_matricula(Aluno, Disciplina, presente).
 
 get_desconhecido(Aluno, Disciplina) :-
+    disciplina(Disciplina, _, _),
     not(matricula_disc(Aluno, Disciplina)),
     not(foi_aprovado(Aluno, Disciplina, true)).
 
