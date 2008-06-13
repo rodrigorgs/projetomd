@@ -50,20 +50,27 @@ public class Matricula extends HttpServlet {
                 }
             }            
         }
-
+        
+        boolean success = false;
         if (!turmasSelecionadas.isEmpty()) {
             try {
                 fachada.efetuarMatricula(aluno, turmasSelecionadas.toArray(new String[0]));
                 msg = "Matricula efetuada com sucesso.";
+                success = true;
             } catch (BusinessException ex) {
+                success = false;
                 msg = ex.getMessage();
             }
             request.setAttribute("msg", msg);
         }
+
         request.setAttribute("turmasSelecao", turmasSelecao);
         request.setAttribute("turmasDisponiveis", turmasDisponiveis);
         request.setAttribute("step", "Matricula.jsp");
-        request.getRequestDispatcher("Planejamento.jsp").forward(request, response);
+        if (success)        
+            request.getRequestDispatcher("Historico.do").forward(request, response);
+        else
+            request.getRequestDispatcher("Planejamento.jsp").forward(request, response);
 
     }
 
