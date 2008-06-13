@@ -8,6 +8,7 @@ package spmp.business.prolog;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.List;
 import jpl.Compound;
@@ -253,12 +254,12 @@ public class SPMPFacade {
     
     public HashMap<SituacaoEnum, List<Disciplina>> getHistorico(Aluno aluno) {
         HashMap ret = new HashMap<SituacaoEnum, List<Disciplina>>();
-        List<Disciplina> retEmAndamento = new ArrayList<Disciplina>();
-        ret.put(SituacaoEnum.EM_ANDAMENTO, retEmAndamento);
-        List<Disciplina> retAprovado = new ArrayList<Disciplina>();
-        ret.put(SituacaoEnum.APROVADO, retAprovado);
-        List<Disciplina> retDesconhecido = new ArrayList<Disciplina>();
-        ret.put(SituacaoEnum.DESCONHECIDO, retDesconhecido);
+        HashSet<Disciplina> retEmAndamento = new HashSet<Disciplina>();
+
+        HashSet<Disciplina> retAprovado = new HashSet<Disciplina>();
+
+        HashSet<Disciplina> retDesconhecido = new HashSet<Disciplina>();
+
         
         String strAluno = aluno.getIdAluno();
         
@@ -274,6 +275,9 @@ public class SPMPFacade {
         for (String disc : desconhecido)
             retDesconhecido.add(newDisciplina(disc));
         
+        ret.put(SituacaoEnum.EM_ANDAMENTO, new ArrayList(retEmAndamento));
+        ret.put(SituacaoEnum.APROVADO, new ArrayList(retAprovado));
+        ret.put(SituacaoEnum.DESCONHECIDO, new ArrayList(retDesconhecido));
         return ret;
     }
     
