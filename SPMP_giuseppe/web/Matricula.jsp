@@ -29,14 +29,14 @@
                     <td colspan="3">(${entry.key.codDisciplina}) ${entry.key.nome}</td>
                 </tr>
                 <c:forEach var="turma" items="${turmasDisponiveis[entry.key]}">
-                    <tr class="result">
+                    <tr class="result"  <c:if test="${invalidas[turma.idTurma]}"> style="background-color:orange"</c:if>>
                         <td width="10">
                             <input type="radio" name="${entry.key.idDisciplina}" value="${turma.idTurma}" 
                                 <c:if test="${turmasSelecao[turma.idTurma]}">
                                     checked="checked"
                                 </c:if> />
                         </td>
-                        <td width="50"><c:if test="invalidas[turma]">***</c:if>${turma.codTurma}</td>
+                        <td width="50">${turma.codTurma}</td>
                         <td>
                             <c:forEach var="horario" items="${turma.horarioCollection}">
                                ${horario.horarioPK.diaSemana}(${horario.horarioPK.horaInicio}-${horario.horarioPK.horaFim}),

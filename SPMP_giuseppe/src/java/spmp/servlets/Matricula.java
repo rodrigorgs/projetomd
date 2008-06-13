@@ -39,7 +39,7 @@ public class Matricula extends HttpServlet {
         HashMap<Disciplina, List<Turma>> turmasDisponiveis = fachada.getTurmasParaAluno(aluno);
         HashMap<String, Boolean> turmasSelecao = new HashMap<String, Boolean>();
         List<String> turmasSelecionadas = new LinkedList<String>();
-        HashMap<Turma, Boolean> invalidas = new HashMap<Turma, Boolean>();
+        HashMap<String, Boolean> invalidas = new HashMap<String, Boolean>();
         
         for (Disciplina disciplina : turmasDisponiveis.keySet()) {
 
@@ -64,7 +64,7 @@ public class Matricula extends HttpServlet {
                 success = false;
                 msg = e.getMessage();
                 for (Turma t : e.getTurmasInvalidas())
-                    invalidas.put(t, true);
+                    invalidas.put(t.getIdTurma(), true);
                 
             } catch (BusinessException ex) {
                 success = false;
