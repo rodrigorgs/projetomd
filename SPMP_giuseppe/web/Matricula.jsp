@@ -36,7 +36,7 @@
                                     checked="checked"
                                 </c:if> />
                         </td>
-                        <td width="50">${turma.codTurma}</td>
+                        <td width="50"><c:if test="invalidas[turma]">***</c:if>${turma.codTurma}</td>
                         <td>
                             <c:forEach var="horario" items="${turma.horarioCollection}">
                                ${horario.horarioPK.diaSemana}(${horario.horarioPK.horaInicio}-${horario.horarioPK.horaFim}),
