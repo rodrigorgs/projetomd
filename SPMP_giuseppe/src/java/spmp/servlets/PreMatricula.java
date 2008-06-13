@@ -45,8 +45,7 @@ public class PreMatricula extends HttpServlet {
             List<Disciplina> disciplinasSelecionadasList = new LinkedList<Disciplina>();
             for (String disciplina : disciplinasSelecionadas) {
                 disciplinasSelecao.put(disciplina, true);
-            }
-            request.setAttribute("disciplinasSelecao", disciplinasSelecao);
+            }            
             try {
                 fachada.efetuarPreMatricula(aluno, disciplinasSelecionadas);
                 msg = "Pré-Matrícula efetuada com sucesso.";
@@ -56,10 +55,14 @@ public class PreMatricula extends HttpServlet {
                 success = false;
             }
             request.setAttribute("msg", msg);
+        } else {
+            String[] disciplinasPre = fachada.getDisciplinasPreMatricula(aluno);
+            for (String disciplina : disciplinasPre) {
+                disciplinasSelecao.put(disciplina, true);
+            }           
         }
-
-
-
+      
+        request.setAttribute("disciplinasSelecao", disciplinasSelecao);
         request.setAttribute("disciplinasPreRequisitos", getMapaPreRequisitos(disciplinasDisponiveis));
         request.setAttribute("disciplinasDisponiveis", disciplinasDisponiveis);
         request.setAttribute("step", "PreMatricula.jsp");
