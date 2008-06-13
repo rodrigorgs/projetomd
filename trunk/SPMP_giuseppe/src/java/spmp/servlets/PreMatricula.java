@@ -6,6 +6,7 @@ package spmp.servlets;
 
 import java.io.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,6 +15,7 @@ import javax.servlet.http.*;
 import spmp.bean.Aluno;
 import spmp.bean.Disciplina;
 import spmp.business.BusinessException;
+import spmp.business.PreMatriculaException;
 import spmp.business.prolog.SPMPFacade;
 
 /**
@@ -39,7 +41,8 @@ public class PreMatricula extends HttpServlet {
         //coleta as disciplinas nas quais o aluno pode efetuar a matrícula
         HashMap<Integer, List<Disciplina>> disciplinasDisponiveis = fachada.getDisciplinasPorSemestre(aluno);
         String[] disciplinasSelecionadas = request.getParameterValues("disciplinasSelecionadas");
-
+        HashMap<Disciplina, Boolean> invalidas = new HashMap<Disciplina, Boolean>();
+        
         boolean success = false;
         if (disciplinasSelecionadas != null) {
             for (String disciplina : disciplinasSelecionadas) {
@@ -49,7 +52,15 @@ public class PreMatricula extends HttpServlet {
                 fachada.efetuarPreMatricula(aluno, disciplinasSelecionadas);
                 msg = "Pré-Matrícula efetuada com sucesso.";
                 success = true;
-            } catch (BusinessException e) {
+            } catch (PreMatriculaException e) {
+                msg = e.getMessage();
+                
+                for (Disciplina d : e.getDisciplinasInvalidas())
+                    invalidas.put(d, true);
+
+                success = false;
+            }
+            catch (BusinessException e) {
                 msg = e.getMessage();
                 success = false;
             }
@@ -60,7 +71,8 @@ public class PreMatricula extends HttpServlet {
                 disciplinasSelecao.put(disciplina, true);
             }           
         }
-      
+        
+        request.setAttribute("invalidas", invalidas);      
         request.setAttribute("disciplinasSelecao", disciplinasSelecao);
         request.setAttribute("disciplinasPreRequisitos", getMapaPreRequisitos(disciplinasDisponiveis));
         request.setAttribute("disciplinasDisponiveis", disciplinasDisponiveis);
