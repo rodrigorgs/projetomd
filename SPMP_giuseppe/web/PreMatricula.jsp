@@ -33,7 +33,7 @@
                             <td width="10"><input type="checkbox" name="disciplinasSelecionadas" value="${disciplina.idDisciplina}" 
                                        <c:if test="${disciplinasSelecao[disciplina.idDisciplina]}"> checked="checked" </c:if> />
                                        </td>                   
-                            <td width="100"><b>(${disciplina.codDisciplina})</b>
+                            <td width="100"><b><c:if test="${invalidas[disciplina]}">***</c:if>(${disciplina.codDisciplina})</b>
                             <td width="300">${disciplina.nome}</td>
                             <td style="font-size:12px">
                                 <c:forEach var="disciplinaRequisitos" items="${disciplinasPreRequisitos[disciplina.idDisciplina]}">
