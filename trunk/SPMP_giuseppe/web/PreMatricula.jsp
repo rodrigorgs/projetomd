@@ -55,7 +55,7 @@
                                        <c:if test="${disciplinasSelecao[disciplina.idDisciplina]}"> checked="checked" </c:if> />
                                        </td>                   
                             <td><b>(${disciplina.codDisciplina})</b>
-                            <td>${disciplina.nome}</td>
+                            <td>${disciplina.nome}</td> 
                             <td style="font-size:12px">
                                 <c:forEach var="disciplinaRequisitos" items="${disciplinasPreRequisitos[disciplina.idDisciplina]}">
                                     <abbr title="${disciplinaRequisitos.nome}">${disciplinaRequisitos.codDisciplina}</abbr>
