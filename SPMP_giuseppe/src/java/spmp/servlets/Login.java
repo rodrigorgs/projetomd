@@ -9,7 +9,6 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import spmp.bean.Aluno;
-import spmp.business.AlunoBusiness;
 import spmp.business.BusinessException;
 import spmp.business.prolog.SPMPFacade;
 
