@@ -54,6 +54,9 @@ public class Matricula extends HttpServlet {
             }            
         }
         
+        for (String disciplina : fachada.getTurmasMatricula(aluno))
+            turmasSelecao.put(disciplina, true);
+
         boolean success = false;
         if (!turmasSelecionadas.isEmpty()) {
             try {
