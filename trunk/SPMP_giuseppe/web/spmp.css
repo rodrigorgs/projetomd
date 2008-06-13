@@ -1,0 +1,120 @@
+/* 
+    Document   : spmp
+    Created on : 10/06/2008, 21:31:33
+    Author     : Giuseppe
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    width:815px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#erro {    
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  top: 5px;
+  bottom: 5px;  
+  background-color: #ff0000;
+}
+
+a {    
+  text-decoration: none;
+  font-size: 10px;
+  color: #969696;        
+
+}
+
+a:hover {
+  font-size: 10px;
+  color: #616060;
+  text-decoration: underline;
+}
+
+#linkhome div {
+     
+}
+#linkhome a {
+    margin-left:655px;   
+    margin-top:-100px;
+    height:100px;
+    font-size:18px;
+    font-family:Arial;
+    text-decoration:none;
+    display:block;
+}
+
+#titulo {
+  color: #333333;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #666666;
+}
+
+#menu {
+  margin-top:10px;
+  font-size: 12px;
+  text-align:right;
+  background-color: #e4e3e3;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom:10px;
+}
+
+#menu a {
+  padding:5px;
+  font-size: 14px;
+  text-align:right;
+        
+  border-top-style: ridge;
+  border-bottom-style: ridge;
+  border-left-style: ridge;
+  border-right-style: ridge;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-color: #bebdbd;
+  border-bottom-color: #bebdbd;
+  border-left-color: #bebdbd;
+  border-right-color: #bebdbd;  
+  font-weight: normal;
+  color: #636363;
+}
+
+#menu a:hover {  
+  color: #565757;
+  background-color: #f0efef;
+  text-decoration:none;  
+}
+
+.titResult {
+  text-transform:uppercase;      
+  font-size: 14px;
+  background-color: #bdbfc4;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.result {
+  text-transform:uppercase;
+  font-size: 12px;
+}
+
+
+
