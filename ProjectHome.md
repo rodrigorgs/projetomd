@@ -1,0 +1,1 @@
+Sistema de informação incompleta.
